@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计算机操作系统笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="计算机操作系统笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机操作系统笔记">
+<meta property="og:url" content="http://example.com/2021/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机操作系统笔记">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210306184849.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210306185833.jpg">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210306190827.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210306191538.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210306203017.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210307145024.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210307151402.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327102346.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327102346.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327102346.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327090913.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327091244.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327092049.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327092816.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327093215.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327093327.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327094236.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327094544.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326094119.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326094338.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326094510.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326094204.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326124711.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326124746.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327095855.png">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201112/18/16361381_1324218546w802.jpg">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327100947.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327101858.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327101625.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327101633.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327102754.png">
+<meta property="article:published_time" content="2021-03-31T15:28:11.984Z">
+<meta property="article:modified_time" content="2021-03-27T02:29:00.611Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210306184849.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计算机操作系统笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2021-03-31T15:28:11.984Z" itemprop="datePublished">2021-03-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">课程内</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计算机操作系统笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>计算机操作系统笔记</p>
+<span id="more"></span>
+
+
+
+<h1 id="第一章-计算机操作系统概论"><a href="#第一章-计算机操作系统概论" class="headerlink" title="第一章 计算机操作系统概论"></a>第一章 计算机操作系统概论</h1><p><strong>操作系统定义</strong>：操作系统是位于硬件层(HAL)之上，所有其它系统软件层之下的一个系统软件。其主要作用是管理好这些设备，提高它们的利用率和系统的吞吐量，并为用户和应用程序提供一个统一的接口，便于用户使用。</p>
+<p><strong>OS</strong>是计算机系统的灵魂！</p>
+<h2 id="操作系统的目标及作用"><a href="#操作系统的目标及作用" class="headerlink" title="操作系统的目标及作用"></a>操作系统的目标及作用</h2><p>目标：有效 方便 可扩充 开放</p>
+<p>作用：</p>
+<p>1.看做是用户与计算机硬件系统之间的接口。</p>
+<p>2.OS作为计算机系统资源的管理者</p>
+<p>3.OS实现了对计算机资源的抽象</p>
+<h2 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h2><p>单批道：</p>
+<p>系统对作业的处理都是成批进行的，且在<strong>内存中</strong>始终<strong>仅存一道</strong>作业运行，</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210306184849.png" alt="image-20210306184842256"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210306185833.jpg" alt="QQ图片20210306185755"></p>
+<p>主要缺陷：I/O操作执行时不可继续</p>
+<p>多批道：</p>
+<p>用户所提交的作业先放在外存形成队列</p>
+<p><strong>在内存中存放多道作业运行</strong></p>
+<p>当在操作A的I/O时调度B的程序运行，增加CPU利用率</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>C</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>计算</strong></td>
+<td><strong>30ms</strong></td>
+<td><strong>60ms</strong></td>
+<td><strong>20ms</strong></td>
+</tr>
+<tr>
+<td><strong>I/O</strong></td>
+<td><strong>40ms</strong></td>
+<td><strong>30ms</strong></td>
+<td><strong>40ms</strong></td>
+</tr>
+<tr>
+<td><strong>计算</strong></td>
+<td><strong>10ms</strong></td>
+<td><strong>10ms</strong></td>
+<td><strong>20ms</strong></td>
+</tr>
+</tbody></table>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210306190827.png" alt="image-20210306190827750"></p>
+<p><strong>ATTENTION</strong>：==B这里没有要求一个程序要一次性执行完==</p>
+<h2 id="操作系统基本特性"><a href="#操作系统基本特性" class="headerlink" title="操作系统基本特性"></a>操作系统基本特性</h2><h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p>并行：多个事件同一时间</p>
+<p>并发：多个事件同一时间间隔</p>
+<h4 id="共享"><a href="#共享" class="headerlink" title="共享"></a>共享</h4><p>是指系统中的资源可供内存中多个并发执行的进程共同使用。（<strong>包含了同时，与图书馆的图书共享不同</strong>）</p>
+<p>1 互斥共享</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210306191538.png" alt="image-20210306191538677"></p>
+<p>2 同时访问方式</p>
+<p>​    一段时间内，多个进程可以同时使用这个资源。</p>
+<p>​    从<strong>微观</strong>上看，多个进程<strong>交替</strong>互斥地使用系统中的某个资源。例如磁盘。</p>
+<h4 id="虚拟"><a href="#虚拟" class="headerlink" title="虚拟"></a>虚拟</h4><p>​    是指通过某种技术把一个物理实体变为（映射为）若干个逻辑上的对应物，用于实现虚拟的技术称为虚拟技术</p>
+<h4 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h4><p>​    进程以人们不可预知的速度向前推进，执行结果不确定，程序不可再现</p>
+<h2 id="操作系统主要功能"><a href="#操作系统主要功能" class="headerlink" title="操作系统主要功能"></a>操作系统主要功能</h2><p>。。。。应该不会考的吧</p>
+<h1 id="第二章-进程的描述与控制"><a href="#第二章-进程的描述与控制" class="headerlink" title="第二章 进程的描述与控制"></a>第二章 进程的描述与控制</h1><p>多批道处理，引进进程</p>
+<h2 id="2-1-前趋图和程序执行"><a href="#2-1-前趋图和程序执行" class="headerlink" title="2.1 前趋图和程序执行"></a>2.1 前趋图和程序执行</h2><p>前趋图(Precedence Graph)是一个有向<strong>无循环</strong>图</p>
+<p>程序顺序执行时的特征：</p>
+<p>（1）顺序性：处理机的操作严格按照程序所规定的顺序执行。<br>（2）封闭性：程序运行时独占全机资源，程序一旦开始执行，<strong>其执行结果不受外界因素影响</strong>。<br>（3）可再现性：只要程序执行时的环境和初始条件相同，都将获得<strong>相同的结果</strong>。<br>（不论它是从头到尾不停顿地执行，还是“停停走走”地执行）</p>
+<p>程序的并发执行 ：==不存在前驱关系的程序==</p>
+<p>（1）间断性<br>程序并发执行是，由于共享系统资源，这些程序形成相互制约的关系，当完成计算C<del>i-1</del>时如未完成I<del>i</del>，则不可继续C<del>i</del></p>
+<p>（2）失去封闭性<br>程序并发执行时，多个程序共享系统资源，因而这些资源的状态将由多个程序来改变，从而导致程序的运行失去封闭性</p>
+<p>（3）不可再现性<br>    程序并发执行，由于失去了封闭性，从而也失去了可再现性</p>
+<h2 id="2-2进程的描述"><a href="#2-2进程的描述" class="headerlink" title="2.2进程的描述"></a>2.2进程的描述</h2><h3 id="process定义及特征"><a href="#process定义及特征" class="headerlink" title="process定义及特征"></a>process定义及特征</h3><p>为使程序并发进行–引入进程概念</p>
+<p>为使程序可独立运行–PCB（Process Control Block）</p>
+<p>定义：</p>
+<p>典型的进程定义有：<br>（1）进程是程序的一次执行。<br>（2）进程是一个程序及其数据在处理机上顺序执行时所发生的活动。<br>（3）进程是程序在一个数据集合上运行的过程，<strong>它是系统进行资源分配和调度的一个独立单位。</strong></p>
+<p>​                                                                              <strong>优化则是以线程为调度单位</strong></p>
+<p>结构特征</p>
+<p>==<strong>程序段+数据段+PCB=进程实体=进程</strong>==（软件=代码+数据+文档）</p>
+<p>==<strong>创建进程实质是创建PCB</strong>==</p>
+<p> 1）动态性： 进程的实质是进程实体的一次执行过程，因此，动态性是进程的最基本的特征。<br>动态性表现：“<strong>它由创建而产生，由调度而执行，由撤消而消亡</strong>”。可见，进程实体有一定的生命期。<br>程序是一组有序指令的集合，其本身并不具有运动的含义，因而是静态的</p>
+<p>  2）并发性<br>   这是指多个进程实体同存于<strong>内存</strong>中，且能在一段时间内同时运行。（多道批处理的时候是在外存）<br>  3）独立性<br>   指进程实体是一个能独立运行、独立分配资源和独立接受调度的基本单位；<br>  4）异步性<br>   指进程按各自独立的、不可预知的速度向前推进，或说进程实体按异步方式运行。</p>
+<h3 id="进程的基本状态"><a href="#进程的基本状态" class="headerlink" title="进程的基本状态"></a>进程的基本状态</h3><p>1）就绪（Ready）状态：当进程已分配到<strong>除CPU以外</strong>的所有必要资源后，只要再获得CPU，便可立即执行。<br> 2）执行状态：进程已获得CPU，其程序正在执行。<br> 3）阻塞状态：正在执行的进程由于发生某事件而暂时无法继续执行时，便放弃处理机而处于暂停状态，把这种暂停状态称为阻塞状态，有时也称为等待状态。根据阻塞原因，系统中设置多个阻塞队列。</p>
+<p>执行态-&gt;就绪态：高优先级任务或超时</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210306203017.png" alt="2FD9F631E6FA386851BADA709756198A"></p>
+<h3 id="对进程的操作–挂起"><a href="#对进程的操作–挂起" class="headerlink" title="对进程的操作–挂起"></a>对进程的操作–挂起</h3><p>进程挂起后处于静止状态</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210307145024.png" alt="image-20210307145023771"></p>
+<p>（上图经过旋转，层次更符合认知）</p>
+<p>blockeds-&gt;readys</p>
+<p>是不可以直接到readya的</p>
+<p>new-&gt;readya</p>
+<p>new-&gt;readys主要是主存不分配空间,进程被安置在外存</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210307151402.png" alt="image-20210307151402434"></p>
+<h2 id="2-3进程控制"><a href="#2-3进程控制" class="headerlink" title="2.3进程控制"></a>2.3进程控制</h2><p>操作系统内核：一些与硬件紧密相关的软件常驻内存</p>
+<p>进程控制一般是由OS内核中的一组<strong>原语</strong>来实现的。 一个不可分割的基本单位，在执行过程中不允许被中断。</p>
+<table>
+<thead>
+<tr>
+<th>创建</th>
+<th>终止</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>申请空白PCB。</td>
+<td>根据被终止进程的PID找到它的PCB，从中读出该进程的状态</td>
+</tr>
+<tr>
+<td>为新进程分配资源。</td>
+<td>若被终止进程正处于执行状态，应立即终止该进程的执行，重新进行调度若该进程还有子孙进程，立即将其所有子孙进程终止</td>
+</tr>
+<tr>
+<td>初始化进程控制块。</td>
+<td>将被终止进程所拥有的全部资源，归还给其父进程，或者归还给系统</td>
+</tr>
+<tr>
+<td>将新进程插入就绪队列，启动调度。</td>
+<td>将被终止进程的PCB从所在队列中移出</td>
+</tr>
+</tbody></table>
+<p>①初始化标识信息。<br>②初始化处理机状态信息。使程序计数器指向程序的入口地址，使栈指针指向栈顶；<br>③初始化处理机控制信息：进程的状态、优先级。</p>
+<table>
+<thead>
+<tr>
+<th>阻塞</th>
+<th>唤醒</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>把进程控制块中的现行状态由“执行”改为阻塞，并将PCB插入阻塞队列</td>
+<td>首先把被阻塞的进程从等待该事件的阻塞队列中移出 将其PCB中的现行状态由阻塞改为就绪</td>
+</tr>
+<tr>
+<td>转调度程序进行重新调度，将处理机分配给另一就绪进程，并进行切换</td>
+<td>PCB插入到就绪队列</td>
+</tr>
+</tbody></table>
+<p><strong>注意</strong>:进程不能自己唤醒自己</p>
+<table>
+<thead>
+<tr>
+<th>挂起</th>
+<th>激活</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>首先检查被挂起进程的状态，若处于活动就绪状态，便将其改为<strong>静止就绪</strong>；对于活动阻塞状态的进程，则将之改为<strong>静止阻塞</strong>；</td>
+<td>激活原语检查该进程的现行状态，若是静止就绪，便将之改为<strong>活动就绪</strong>；        若为静止阻塞，便将之改为<strong>活动阻塞</strong></td>
+</tr>
+<tr>
+<td>被挂起进程的PCB复制到指定的内存区域。</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>创建、终止（自己）、挂起（自己）、激活、阻塞、唤醒都可能会产生新的调度</p>
+<h2 id="2-4进程同步"><a href="#2-4进程同步" class="headerlink" title="2.4进程同步"></a>2.4进程同步</h2><p>如果有多个进程需要同时修改某一数据，系统必须控制，一次仅允许一个进程完成读数据、修改数据两件事以后，才允许别的进程对同一数据的读和修改操作。 </p>
+<p>信号量按照功能来分：互斥信号量和资源信号量。<br><strong>互斥信号量</strong>：用于申请或释放资源的使用权，常初始化为1。<br><strong>资源信号量</strong>：用于申请或归还资源，可以初始化为大于1的正整数，表示系统中某类资源的可用个数。</p>
+<p>使程序的执行具有可再现性。</p>
+<p><strong>任何时刻，只允许一个进程进入临界区，以此实现进程对临界资源的互斥访问。</strong></p>
+<p>临界区使用原则</p>
+<ul>
+<li>空闲让进</li>
+<li>忙则等待</li>
+<li>有限等待</li>
+<li>让权等待（自己不进让别人进）</li>
+</ul>
+<p>信号量功能分类</p>
+<ul>
+<li>互斥 初始化为1</li>
+<li>资源 初始化&gt;1</li>
+</ul>
+<p>信号量机制分类</p>
+<ul>
+<li>整型   会出现忙等</li>
+<li>记录型</li>
+<li>AND型</li>
+<li>信号量集</li>
+<li></li>
+</ul>
+<h2 id="2-5经典进程的同步问题"><a href="#2-5经典进程的同步问题" class="headerlink" title="2.5经典进程的同步问题"></a>2.5经典进程的同步问题</h2><h2 id="2-6进程通信"><a href="#2-6进程通信" class="headerlink" title="2.6进程通信"></a>2.6进程通信</h2><p>低级通信：进程之间的互斥和同步，由于其所交换的<strong>信息量少</strong>而被归结为低级通信。</p>
+<p>高级通信：是指用户可直接利用操作系统所提供的一组通信命令高效地传送<strong>大量数据</strong>的一种通信方式。</p>
+<p>1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">共享存储器系统--&gt;共享数据结构--&gt;公用数据结构--&gt;低级通信</span><br><span class="line">共享存储器系统--&gt;共享存储区通信--&gt;由操作系统在内存中划分出一块区域作为共享存储区--&gt;高级通信</span><br></pre></td></tr></table></figure>
+
+<p>2<strong>管道通信</strong>：</p>
+<p>向管道(共享文件)提供输入的发送进程(即<strong>写进程</strong>)， 以<strong>字符流</strong>形式将大量的数据送入管道；<br>而接受管道输出的接收进程(即<strong>读进程</strong>)，则从管道中接收(读)数据。由于发送进程和接收进程是利用管道进行通信的，故又称为管道通信。</p>
+<p>① 互斥，即当一个进程正在对pipe执行读/写操作时，其它(另一)进程必须等待。<br>② 同步，指当写(输入)进程把一定数量(如4 KB)的数据写入pipe，便去睡眠等待， 直到读(输出)进程取走数据后，再把他唤醒。当读进程读一空pipe时，也应睡眠等待，直至写进程将数据写入管道后，才将之唤醒。<br>③ 确定对方是否存在，只有确定了对方已存在时，才能进行通信。 </p>
+<p>3<strong>消息传递方式系统</strong>：<strong>是高级</strong></p>
+<p>直接：</p>
+<p>发送进程利用OS所提供的发送命令，直接把消息发送给目标进程</p>
+<p>间接：</p>
+<p>需要通过某种中间实体如信箱</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">mailbox--&gt;private--&gt;其他用户则只能将自己构成的消息发送到该信箱中-单向通信链路-进程结束信箱消失</span><br><span class="line">mailbox--&gt;sharing--&gt;信箱的拥有者和共享者-都有权从信箱中取走发送给自己的消息-须指出共享进程用户的名字</span><br><span class="line">mailbox--&gt;public--&gt;信箱一直存在</span><br></pre></td></tr></table></figure>
+
+<p>4<strong>客户机—服务器系统</strong>—网络通信，套接字、RPC</p>
+<h2 id="2-7线程的基本概念"><a href="#2-7线程的基本概念" class="headerlink" title="2.7线程的基本概念"></a>2.7线程的基本概念</h2><p>以提高程序并发执行的程度，进一步提高系统的吞吐量。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Process</th>
+<th>Thread</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>schedule</td>
+<td>进程作为资源拥有的基本单位。</td>
+<td>线程作为调度和分派的基本单位</td>
+</tr>
+<tr>
+<td>concurrent</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>resource</td>
+<td></td>
+<td>本身并无系统资源，多个线程共享该进程资源</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="2-8线程的实现"><a href="#2-8线程的实现" class="headerlink" title="2.8线程的实现"></a>2.8线程的实现</h2><h1 id="第三章处理及调度与死锁"><a href="#第三章处理及调度与死锁" class="headerlink" title="第三章处理及调度与死锁"></a>第三章处理及调度与死锁</h1><h2 id="3-1-处理机调度的基本概念"><a href="#3-1-处理机调度的基本概念" class="headerlink" title="3.1  处理机调度的基本概念"></a>3.1  处理机调度的基本概念</h2><ol>
+<li>高级调度(High Scheduling)<br>外存上处于后备队列中的那些作业调入内存，也就是说，它的调度对象是<strong>作业</strong></li>
+<li>中级调度<br>内存调度,提高吞吐量和内存利用率,把暂时不运行的程序放置<strong>外存</strong>   </li>
+<li>低级调度(Low level scheduling)<br>它所调度的对象是进程(或内核级线程)。</li>
+</ol>
+<ul>
+<li>进程调度的实质 处理器资源合理分配给适当的进程</li>
+<li>进程调度就是从就绪状态的进程中，挑选一个进程到处理器上运行</li>
+</ul>
+<h3 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h3><ul>
+<li>非抢占方式(Non-preemptive Mode)</li>
+</ul>
+<p>决不会因为时钟中断等原因而抢占正在运行进程的处理机，也不允许其它进程抢占已经分配给它的处理机。</p>
+<p>可能引起进程调度的因素</p>
+<p>   1 正在执行的进程执行完毕， 或因发生某事件而不能再继续执行；<br>   2 执行中的进程因提出I/O请求而暂停执行；<br>   3 在进程通信或同步过程中执行了某种原语操作，如P操作(wait操作)、Block原语、suspend原语等。</p>
+<ul>
+<li>抢占方式(Preemptive Mode) </li>
+</ul>
+<p>根据某种原则去暂停某个正在执行的进程，将已分配给该进程的处理机重新分配给另一进程。</p>
+<p>（小小吐槽，杨老师的ppt的categories一点都不好）</p>
+<h3 id="处理机调度算法的目标"><a href="#处理机调度算法的目标" class="headerlink" title="处理机调度算法的目标"></a>处理机调度算法的目标</h3><p><strong>调度的原则：满足用户的需要和系统的需要。</strong></p>
+<p>1、提高资源利用率<br>    CPU利用率= $\frac {CPU有效工作时间} {(CPU有效工作时间+CPU空闲等待时间)}$</p>
+<p>2、公平性<br>3、系统资源使用的平衡性<br>4、策略强制执行</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327102346.png" alt="image-20210320135734502"></p>
+<p>批处理系统目标：</p>
+<ul>
+<li><p>平均周转时间短</p>
+</li>
+<li><p>系统吞吐量高：尽量多地选择短作业运行</p>
+</li>
+<li><p>处理机利用率高：尽量选择计算量大的作业</p>
+</li>
+</ul>
+<p>分时处理系统目标-</p>
+<ul>
+<li>响应时间快：分时系统的重要准则。</li>
+<li>均衡性：指系统响应时间的长短应与用户所 请求服务的复杂性相适应。</li>
+</ul>
+<p>实时系统目标：</p>
+<ul>
+<li>截至时间保证</li>
+<li>可预测性（暂时不是很明白）<strong>保证任务执行的连续性，执行流程能够事先确定</strong></li>
+</ul>
+<h2 id="3-2-调度算法"><a href="#3-2-调度算法" class="headerlink" title="3.2  调度算法"></a>3.2  调度算法</h2><p>==作业和进程和线程的区别==</p>
+<p>一个作业通常包括程序、数据和操作说明书3部分。每一个进程由PCB、程序和数据集合组成。这说明程序是进程的一部分，是进程的实体。因此，一个作业可划分为若干个进程来完成，而每一个进程有其实体————程序和数据集合</p>
+<ol>
+<li><p>先来先服务（FCFS）<br>对待<strong>短作业</strong>（进程）不公平，如果他们排在队列后面，则其等待时间远大于其执行时间</p>
+</li>
+<li><p>短进程优先（SJPF）</p>
+</li>
+</ol>
+<ul>
+<li><p>该算法对<strong>长作业</strong>不利</p>
+</li>
+<li><p>不能保证紧迫性作业(进程)会被及时处理。</p>
+</li>
+<li><p>由于作业(进程)的长短只是根据用户所提供的估计执行时间而定的，而用户不一定对执行时间估计那么准确，致使该算法不一定能真正做到短作业优先调度。</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327102346.png" alt="image-20210320141321284"></p>
+</li>
+</ul>
+<ol start="3">
+<li><p>时间片轮转调度算法（round robin RR）：</p>
+<p>基本单位是system tick</p>
+<p><strong>重点是队列的顺序</strong></p>
+<p>排成一个队列，每次调度时，把CPU分配给队首进程。并令其执行一个时间片<br>内核在满足下列条件时，将把CPU交给下一个就绪态的进程：<br>当前进程因为某种原因暂停执行，如被阻塞；<br>当前进程在时间片还没有结束时已经完成了；<br>时间片结束。</p>
+</li>
+</ol>
+<ul>
+<li>优点：对分时系统有利</li>
+<li>缺点：太小增加系统开销太大退化为FCFS，<strong>对I/O系统不利</strong>因为在两次I/O之间仅需很少的CPU时间，却需要等待一个时间片。（不是很明白）</li>
+</ul>
+<ol start="4">
+<li><p>高优先权优先调度算法（priority-scheduling algorithm PSA）</p>
+<p>处理机分配给就绪队列中优先级最高的进程。</p>
+<ul>
+<li><p>非抢占式</p>
+<p>该进程便一直执行下去，直至完成</p>
+</li>
+<li><p>抢占式</p>
+<p>只要又出现了另一个其优先权更高的进程，进程调度程序就立即停止当前进程的执行，重新将处理机分配给新到的优先权最高的进程。</p>
+<ul>
+<li>优点：能更好地满足紧迫作业的要求，故而常用于要求比较严格的实时系统中，以及对性能要求较高的批处理和分时系统中</li>
+<li>缺点：系统开销较大</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>高响应比优先调度算法（Highest Response Ration Next HRRN ）</p>
+<p>优先权=$\frac{等待时间+要求服务时间}{要求服务时间}$=$\frac{响应时间}{要求服务时间}$</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327102346.png" alt="image-20210320144631506"></p>
+<p>该算法既照顾了短作业，又考虑了作业到达的先后次序，不会使长作业长期得不到服务。<br>利用该算法时，每次调度之前，都须先做响应比的计算，会增加系统开销。</p>
+</li>
+<li><p>实时调度算法</p>
+</li>
+<li><p>最早截至时间优先EDF算法</p>
+</li>
+</ol>
+<h2 id="3-3-实时调度"><a href="#3-3-实时调度" class="headerlink" title="3.3  实时调度"></a>3.3  实时调度</h2><h2 id="3-4-多处理机系统中的调度"><a href="#3-4-多处理机系统中的调度" class="headerlink" title="3.4  多处理机系统中的调度"></a>3.4  多处理机系统中的调度</h2><h2 id="3-5-产生死锁的原因和必要条件"><a href="#3-5-产生死锁的原因和必要条件" class="headerlink" title="3.5  产生死锁的原因和必要条件"></a>3.5  产生死锁的原因和必要条件</h2><h2 id="3-6-预防死锁的方法"><a href="#3-6-预防死锁的方法" class="headerlink" title="3.6  预防死锁的方法"></a>3.6  预防死锁的方法</h2><h2 id="3-7-死锁的检测与解除"><a href="#3-7-死锁的检测与解除" class="headerlink" title="3.7  死锁的检测与解除"></a>3.7  死锁的检测与解除</h2><h1 id="第四章存储器管理"><a href="#第四章存储器管理" class="headerlink" title="第四章存储器管理"></a>第四章存储器管理</h1><h2 id="4-1-存储器的层次结构"><a href="#4-1-存储器的层次结构" class="headerlink" title="4.1 存储器的层次结构"></a>4.1 存储器的层次结构</h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327090913.png" alt="image-20210327090906483"></p>
+<p>寄存器、高速缓存、主存储器和磁盘缓存均属于操作系统存储管理的管辖范畴，掉电后它们存储的信息不再存在。</p>
+<p><strong>固定磁盘</strong>和可移动存储介质属于设备管理的管辖范畴，它们存储的信息将被长期保存。</p>
+<p>长期保存则文件选择磁盘</p>
+<h2 id="4-2-程序的装入和链接"><a href="#4-2-程序的装入和链接" class="headerlink" title="4.2 程序的装入和链接"></a>4.2 程序的装入和链接</h2><p>源程序变成一个可在内存中执行的程序，通常要经过3步骤</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">编译compiler --&gt; 链接linker--&gt; 装入load</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327091244.png" alt="image-20210327091244309"></p>
+<h3 id="程序的装入"><a href="#程序的装入" class="headerlink" title="程序的装入"></a><strong>程序的装入</strong></h3><ul>
+<li><p>(1)．绝对装入方式 </p>
+<p>知道程序将驻留在内存的什么位置,<strong>逻辑地址与实际内存地址完全相同</strong></p>
+</li>
+<li><p>(2)．可重定位装入方式  </p>
+<p>把在装入时对目标程序中指令和数据的变换过程称为重定位。</p>
+</li>
+</ul>
+<p>​       地址变换是在装入时一次完成的，<strong>以后不再改变</strong>，故称为静态重定位</p>
+<ul>
+<li><p>(3)．动态运行时装入方式</p>
+<p>并不立即把装入模块中的相对地址转换为绝对地址，而是把这种地址转换推迟到程序执行时进行</p>
+</li>
+</ul>
+<h3 id="程序的链接"><a href="#程序的链接" class="headerlink" title="程序的链接"></a>程序的链接</h3><p>根据链接时间的不同分类</p>
+<ul>
+<li><p>静态链接方式</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327092049.png" alt="image-20210327092049713"></p>
+<p>在<strong>程序运行之前</strong>链接模块 </p>
+<ul>
+<li>在链接成一个装入模块时修改模块的相对地址。</li>
+<li>将每个模块中所用的外部调用符号也都变换为相对地址。例如将call B 变换为JSR “L”</li>
+</ul>
+</li>
+<li><p>装入时动态链接</p>
+<p>在装入内存时，采用<strong>边装入边链接</strong>的链接方式。即分别装入各模块，并且在装入的过程中修改相对地址和外部引用地址。</p>
+</li>
+<li><p>运行时动态链接</p>
+<p><strong>运行时</strong>发现引用的地址是相对地址或者外部地址时，才发起链接，寻找正确的引用地址</p>
+</li>
+</ul>
+<h2 id="4-3-连续分配存储管理方式"><a href="#4-3-连续分配存储管理方式" class="headerlink" title="4.3  连续分配存储管理方式"></a>4.3  连续分配存储管理方式</h2><p>为使程序装入内存</p>
+<h3 id="单一连续分配"><a href="#单一连续分配" class="headerlink" title="单一连续分配"></a>单一连续分配</h3><p>单道程序环境下: 分系统区和用户区</p>
+<p>整个内存的<strong>用户区</strong>只驻留一个用户的一个程序</p>
+<h3 id="固定分区分配"><a href="#固定分区分配" class="headerlink" title="固定分区分配"></a>固定分区分配</h3><p>分区划分方法:<br>大小等<br>大小不等</p>
+<p>内存分配情况用分区描述表记录</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327092816.png" alt="image-20210327092815909"></p>
+<h3 id="动态分区分配"><a href="#动态分区分配" class="headerlink" title="动态分区分配"></a>动态分区分配</h3><p><strong>分区的数据结构</strong></p>
+<ul>
+<li>空闲分区表</li>
+<li>空闲分区链</li>
+</ul>
+<p><strong>分区分配操作</strong></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327093215.png" alt="image-20210327093215757"></p>
+<pre><code>请求的分区大小为u.size，
+表中每个空闲分区的大小可表示为m.size。
+size是事先规定的不再切割的剩余分区的大小，m.size-u.size≤size，说明多余部分太小，不再分割，否则，从该分区中划分一部分空间给请求者。
+</code></pre>
+<p>**分区回收 **</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327093327.png" alt="image-20210327093327787"></p>
+<h3 id="4-3-4-顺序搜索的动态分区分配算法"><a href="#4-3-4-顺序搜索的动态分区分配算法" class="headerlink" title="4.3.4 顺序搜索的动态分区分配算法"></a><strong>4.3.4</strong> <strong>顺序搜索的动态分区分配算法</strong></h3><p>首次匹配(首次适应算法FF )：<br>要求空闲分区链以<strong>地址递增</strong>的次序链接</p>
+<p>循环匹配(循环首次适应算法NF) :<br>查找不是从头开始，而是从上次找到的空闲分区的下一个空闲分区开始查找</p>
+<p>最佳匹配(最佳适应算法BF ):<br>空闲分区按其容量以从小到大的顺序</p>
+<p>最坏适应算法 WF:<br>从大到小的顺序</p>
+<h3 id="4-3-5-基于索引搜索的动态分区分配算法"><a href="#4-3-5-基于索引搜索的动态分区分配算法" class="headerlink" title="4.3.5 基于索引搜索的动态分区分配算法"></a>4.3.5 基于索引搜索的动态分区分配算法</h3><ol>
+<li><p>快速适应算法<br>将空闲分区根据其容量大小进行分类，对于每一类具有相同容量的所有空闲分区，单独设立一个空闲分区链表。</p>
+</li>
+<li><p>伙伴系统</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327094236.png" alt="image-20210327094236384"></p>
+</li>
+</ol>
+<p>缺点：内存利用率不高，分配的内存大小为2的幂，假如只需要65个页面，也需要分配128个页面的块，从而浪费了63个页面，即产生内部碎片。</p>
+<h3 id="4-3-6-可重定位分区分配"><a href="#4-3-6-可重定位分区分配" class="headerlink" title="4.3.6 可重定位分区分配"></a>4.3.6 可重定位分区分配</h3><p><strong>紧凑技术</strong></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327094544.png"></p>
+<p>即须在系统中增设一个重定位寄存器，用它来存放程序(数据)在内存中的起始地址</p>
+<h2 id="4-4-对换"><a href="#4-4-对换" class="headerlink" title="4.4  对换"></a>4.4  对换</h2><h2 id="4-5-分页存储管理方式"><a href="#4-5-分页存储管理方式" class="headerlink" title="4.5  分页存储管理方式"></a>4.5  分页存储管理方式</h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326094119.png" alt="image-20210326094112743"></p>
+<p>程序在内存中不一定连续存放</p>
+<p>根据离散时的<strong>基本单位</strong>不同，可分为三种：</p>
+<ul>
+<li><p> 分页存储管理 </p>
+</li>
+<li><p> 分段存储管理 </p>
+</li>
+<li><p> 段页式存储管理</p>
+</li>
+</ul>
+<h3 id="分页存储管理"><a href="#分页存储管理" class="headerlink" title="分页存储管理"></a>分页存储管理</h3><h4 id="4-5-1分页存储管理的基本方法"><a href="#4-5-1分页存储管理的基本方法" class="headerlink" title="4.5.1分页存储管理的基本方法"></a>4.5.1分页存储管理的基本方法</h4><ol>
+<li> 页面和物理块</li>
+</ol>
+<ul>
+<li>页面</li>
+</ul>
+<p>把每个进程的逻辑地址空间分成一些<strong>大小相等</strong>的片</p>
+<ul>
+<li>页面大小</li>
+</ul>
+<p>页面大小应是2的幂，通常为512B～8KB。</p>
+<ol start="2">
+<li>地址结构</li>
+</ol>
+<p>在页式管理系统中将程序地址空间分成<strong>大小相同</strong>(和上面一个意思)页面。将内存空间分成与页面相同大小的存储块。<br>32位机的分页存储逻辑地址结构:</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326094338.png" alt="image-20210326094338921"></p>
+<p>若给定一个逻辑地址空间中的地址为A，页面的大小为L，则页号P和页内地址d可按下式求得：</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326094510.png" alt="image-20210326094510450"></p>
+<p>其系统的页面大小为1 KB，设A = 2170 B，则由上式可以求得P = 2，d = 122。</p>
+<ol start="3">
+<li>页表</li>
+</ol>
+<p>系统应能保证进程的正确运行，==即能在内存中找到每个页面所对应的物理块==。为此，系统又为每个进程建立了一张页面映像表，简称页表。</p>
+<p><strong>页表储存的就是物理块号</strong>,与上面的页内地址不是一个东西(这个图画的海星:happy:)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">页表 --&gt; |储存|页号P --&gt; |找到对应|物理块号</span><br><span class="line">逻辑地址--&gt;|算出|页号</span><br><span class="line">逻辑地址--&gt;|算出|页内地址</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326094204.png" alt="image-20210326094204295"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326124711.png" alt="image-20210326124711277"><br><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326124746.png" alt="image-20210326124746551"></p>
+<h4 id="4-5-2-地址变换机构"><a href="#4-5-2-地址变换机构" class="headerlink" title="4.5.2 地址变换机构"></a><strong>4.5.2</strong> 地址变换机构</h4><p>页表寄存器PTR，在其中存放当前运行的进程的页表在内存中的<strong>起始地址</strong>和<strong>页表长度</strong>。</p>
+<p>当进程真正投入运行时，从进程PCB中读出页表的始址和页表长度</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327095855.png" alt="image-20210327095855265"></p>
+<h4 id="具有快表的地址变换机构"><a href="#具有快表的地址变换机构" class="headerlink" title="具有快表的地址变换机构"></a><strong>具有快表的地址变换机构</strong></h4><p><img src="http://blog.chinaunix.net/attachment/201112/18/16361381_1324218546w802.jpg" alt="16361381_1324218546w802.jpg (376×285)"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327100947.png" alt="image-20210327100947122"></p>
+<h4 id="二级页表-三次访问内存"><a href="#二级页表-三次访问内存" class="headerlink" title="二级页表 三次访问内存"></a>二级页表 三次访问内存</h4><blockquote>
+<p>这个大小对应关系好像不是很清楚</p>
+<p>1m个页我了解</p>
+<p>估计还是得看看程序员的自我修养那本书</p>
+</blockquote>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327101858.png" alt="image-20210327101858191"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327101625.png" alt="image-20210327101625549"></p>
+<p>这里的b还是b*页面大小</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327101633.png" alt="image-20210327101633939"></p>
+<h2 id="4-6-分段存储管理方式"><a href="#4-6-分段存储管理方式" class="headerlink" title="4.6 分段存储管理方式"></a>4.6 分段存储管理方式</h2><p>4.6.1.引入分段的原因</p>
+<h3 id="4-6-2-分段存储基本原理"><a href="#4-6-2-分段存储基本原理" class="headerlink" title="4.6.2 分段存储基本原理"></a><strong>4.6.2</strong> <strong>分段存储基本原理</strong></h3><p>每个段有自己的名字和长度（程序段，代码段）。程序的逻辑地址是由段名（段号）和段内偏移量决定。每个段的逻辑地址从0开始编址.</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327102754.png" alt="image-20210327102754641"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/" data-id="ckmyawrbe001t80wgbmfrfoxm" data-title="计算机操作系统笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          计算机网络笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/31/database/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">database</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%A6%E7%B1%8D/">-书籍</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">-课程内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E5%AD%A6/">文学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E5%AD%A6/%E8%AF%BE%E5%A4%96/">课外</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/">日常生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%86%85/">课内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">课程内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%A4%96%E7%9F%A5%E8%AF%86/">课程外知识</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%A4%96%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0/">课程外知识学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9B%E8%BD%B4-%E8%AF%BE%E7%A8%8B%E5%86%85/" rel="tag">-四轴 -课程内</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F-%E5%B0%8F%E6%80%9D%E8%80%83/" rel="tag">-读后感 -小思考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tofel/" rel="tag">Tofel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" rel="tag">喜欢的语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" rel="tag">学习相关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">嵌入式操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%98%E6%8A%84/" rel="tag">摘抄</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/" rel="tag">生活感想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E7%9B%B8%E5%85%B3/" rel="tag">知识相关</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%9B%9B%E8%BD%B4-%E8%AF%BE%E7%A8%8B%E5%86%85/" style="font-size: 10px;">-四轴 -课程内</a> <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F-%E5%B0%8F%E6%80%9D%E8%80%83/" style="font-size: 10px;">-读后感 -小思考</a> <a href="/tags/Tofel/" style="font-size: 10px;">Tofel</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">喜欢的语句</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" style="font-size: 10px;">学习相关</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">学习笔记</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">嵌入式操作系统</a> <a href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 15px;">思维导图</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 10px;">摘抄</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 10px;">数据库</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/" style="font-size: 10px;">生活感想</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E7%9B%B8%E5%85%B3/" style="font-size: 15px;">知识相关</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/31/%E5%B0%8F%E9%99%88%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E5%80%99%E7%9A%84%E9%97%AE%E9%A2%98/">对新手很友好的搭建博客和使用,包含图床配置(因为我本身就是新手)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%80%9D%E8%80%83/">区块链/数字货币</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B%E5%AF%B9t%E5%92%8Cs%E9%98%B5%E5%AE%B9%E7%9A%84%E6%83%B3%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/">喜欢的语句</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/">嵌入式操作系统笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

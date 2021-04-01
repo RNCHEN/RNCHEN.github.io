@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>嵌入式操作系统笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="廖老师的嵌入式操作系统课….真的超级系统就没有什么可分章节的了,就是一条线 操作系统是如何跑起来的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="嵌入式操作系统笔记">
+<meta property="og:url" content="http://example.com/2021/03/31/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="廖老师的嵌入式操作系统课….真的超级系统就没有什么可分章节的了,就是一条线 操作系统是如何跑起来的">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327110739.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327113736.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327133044.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327133056.jpeg">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327135052.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327140011.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327144117.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327150255.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327165502.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210331182024.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210331184523.png">
+<meta property="article:published_time" content="2021-03-31T15:28:11.984Z">
+<meta property="article:modified_time" content="2021-03-31T10:45:57.482Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="嵌入式操作系统">
+<meta property="article:tag" content="学习相关">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210327110739.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-嵌入式操作系统笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/31/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2021-03-31T15:28:11.984Z" itemprop="datePublished">2021-03-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BE%E5%86%85/">课内</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      嵌入式操作系统笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>廖老师的嵌入式操作系统课….真的超级系统<br>就没有什么可分章节的了,就是一条线 操作系统是如何跑起来的</p>
+<span id="more"></span>
+
+
+
+<blockquote>
+<p>表示暂未解决的疑问或是重点要素</p>
+</blockquote>
+<pre><code> 表代码或是格式
+</code></pre>
+<p><strong>重点</strong></p>
+<p><em>自己的思考</em></p>
+<h1 id="任务调度机制-Task-management"><a href="#任务调度机制-Task-management" class="headerlink" title="任务调度机制 Task management"></a>任务调度机制 Task management</h1><p>事件触发–中断</p>
+<p>时间出发-时间管理</p>
+<p>任务是一个程序运行的实体，资源占用的基本单位，系统调度的基本单元</p>
+<p>RTOS基本调度单位是任务</p>
+<p>==线程之间共享地址==</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327110739.png" alt="image-20210327110739664"></p>
+<p>线程: 2 相当于同地址操作</p>
+<p>进程: 1 相当于地址副本的操作</p>
+<p>几个参数</p>
+<p>OS_TCB   *OSTCBFreeList;<br>OS_TCB   OSTCBTbl[OS_LOWEST_PRIO + 1]; </p>
+<p>OSTCBPrioTbl[]</p>
+<p>OSTCBTbl[0]</p>
+<p><em>OSPrioHighRdy</em></p>
+<p><strong>OSTCBHighRdy;</strong></p>
+<p>OS_EXT INT8U      OSPrioCur;<br>OS_EXT INT8U      OSPrioHighRdy;<br>OS_EXT OS_TCB     *OSTCBCur;<br>OS_EXT OS_TCB     *OSTCBFreeList;<br>OS_EXT OS_TCB     *OSTCBHighRdy;<br>OS_EXT OS_TCB     *OSTCBList;<br>OS_EXT OS_TCB     *OSTCBPrioTbl[OS_LOWEST_PRIO + 1];<br>OS_EXT OS_TCB      OSTCBTbl[OS_MAX_TASKS + OS_N_SYS_TASKS]; </p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327113736.png" alt="image-20210327113736836"></p>
+<p>OS_EXT  OS_TCB           <em>OSTCBCur;                        /</em> Pointer to currently running TCB指向当前运行的TCB指针*/<br>OS_EXT  OS_TCB           <em>OSTCBFreeList;                   /</em> Pointer to list of free TCBs 空闲指针列表(指向OSTCBTb[])<em>/<br>OS_EXT  OS_TCB           <em>OSTCBHighRdy;                    /</em> Pointer to highest priority TCB R-to-R指向最高优先级的TCB指针</em>/<br>OS_EXT  OS_TCB           <em>OSTCBList;                       /</em> Pointer to doubly linked list of TCBs指向双向链表的TCB指针*/<br>OS_EXT  OS_TCB          * <em>OSTCBPrioTbl[OS_LOWEST_PRIO + 1u];    /</em> Table of pointers to created TCBsTCB优先级表(指向创建的TCB)<em>/<br>OS_EXT  OS_TCB            OSTCBTbl[OS_MAX_TASKS + OS_N_SYS_TASKS];   /</em> Table of TCBs TCB列表*/</p>
+<blockquote>
+<p>*OSTCBPrioTbl[OS_LOWEST_PRIO + 1u];</p>
+<p>  OSTCBTbl[OS_MAX_TASKS + OS_N_SYS_TASKS]</p>
+<p>  的区别</p>
+</blockquote>
+<p>1， 所有的任务控制块TCB都是存放在 <strong>任务控制块列表数组OSTCBTbl[]</strong> 中，系统通过任务<strong>控制块优先级表OSTCBPrioTbl[] ，</strong>查询到任务控制块的地址，任务控制块的相关数据定义。<br>2，任务<strong>控制块优先级表OSTCBPrioTbl[]  是以任务为索引，里面保存的是任务0到最大任务的任务控制块的首地址，据此可以通过任务优先级号快速找到当前任务在任务控制块中的首地址，而不必到任务控制块链表中去一步一步查找，</strong>加快了任务的切换时间，提高了操作系统的效率。</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327133044.png" alt="img"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327133056.jpeg" alt="img"></p>
+<h2 id="How-to-describe-a-task"><a href="#How-to-describe-a-task" class="headerlink" title="How to describe a task ?"></a>How to describe a task ?</h2><p>os_tcb块 方便起见,只写下我们现目前学过的东西</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">os_tcb</span> &#123;</span> </span><br><span class="line">    OS_STK        *OSTCBStkPtr;    <span class="comment">//任务当前堆栈指针     </span></span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">os_tcb</span> *<span class="title">OSTCBNext</span>;</span>    <span class="comment">//TCB节点的后继       </span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">os_tcb</span> *<span class="title">OSTCBPrev</span>;</span>  <span class="comment">//TCB节点前驱</span></span><br><span class="line"> </span><br><span class="line">     </span><br><span class="line">    INT16U         OSTCBDly; <span class="comment">//当任务需要被延迟一定数量的时钟滴答声或任务需</span></span><br><span class="line">                             <span class="comment">//要为事件超时而付出代价时使用。即可以容忍的时</span></span><br><span class="line">                             <span class="comment">//间</span></span><br><span class="line">    INT8U          OSTCBStat; <span class="comment">//指示任务状态，当OSTCBStat为0时，任务就可以</span></span><br><span class="line">                              <span class="comment">//运行了</span></span><br><span class="line">    INT8U          OSTCBPrio; <span class="comment">//任务的优先级</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    INT8U          OSTCBX;  <span class="comment">//位图法需要的结构</span></span><br><span class="line">    INT8U          OSTCBY; </span><br><span class="line">    INT8U          OSTCBBitX; </span><br><span class="line">    INT8U          OSTCBBitY; </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">&#125; OS_TCB; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327135052.png" alt="image-20210327135052643"></p>
+<h2 id="How-to-create-a-task-in-uc-OS-II"><a href="#How-to-create-a-task-in-uc-OS-II" class="headerlink" title="How to create a task in uc/OS II ?"></a>How to create a task in uc/OS II ?</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">INT8U  <span class="title">OSTaskCreate</span> <span class="params">(<span class="keyword">void</span> (*task)(<span class="keyword">void</span> *p_arg), <span class="keyword">void</span> *p_arg, OS_STK *ptos,INT8U prio)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    OS_STK    *psp;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> OS_CRITICAL_METHOD == 3      <span class="comment">//进入临界区有三种方式 一般选用第三种         </span></span></span><br><span class="line">     OS_CPU_SR  cpu_sr = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">OS_ENTER_CRITICAL();   </span><br><span class="line">    <span class="keyword">if</span> (OSIntNesting &gt; <span class="number">0</span>) &#123;    <span class="comment">//大于0表示正在中断嵌套,则不允许创建任伍   </span></span><br><span class="line">OS_EXIT_CRITICAL();</span><br><span class="line">           <span class="keyword">return</span> (OS_ERR_TASK_CREATE_ISR);</span><br><span class="line">    &#125;                                                                       </span><br><span class="line">     <span class="keyword">if</span> (OSTCBPrioTbl[prio] == (OS_TCB *)<span class="number">0</span>) &#123;<span class="comment">//当前优先级没有被占用</span></span><br><span class="line">           OSTCBPrioTbl[prio] = (OS_TCB *)<span class="number">1</span>;  <span class="comment">//占用 </span></span><br><span class="line">OS_EXIT_CRITICAL();</span><br><span class="line">    </span><br><span class="line">psp = (OS_STK *)OSTaskStkInit(task, pdata, ptos, <span class="number">0</span>); </span><br><span class="line">err = OS_TCBInit(prio, psp, (OS_STK *)<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, (<span class="keyword">void</span> *)<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    	<span class="keyword">if</span> (err == OS_NO_ERR) &#123;</span><br><span class="line">          		OS_ENTER_CRITICAL();</span><br><span class="line">           	 		OSTaskCtr++;                                      </span><br><span class="line">         	 	OS_EXIT_CRITICAL();</span><br><span class="line"><span class="keyword">if</span> (OSRunning == TRUE) &#123;   <span class="comment">//表示usos正在运行就可以进行调度</span></span><br><span class="line">OS_Sched();<span class="comment">//调度</span></span><br><span class="line">            &#125;</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            OS_ENTER_CRITICAL();</span><br><span class="line">            OSTCBPrioTbl[prio] = (OS_TCB *)<span class="number">0</span>;</span><br><span class="line">            OS_EXIT_CRITICAL();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (err);</span><br><span class="line">    &#125;</span><br><span class="line">    OS_EXIT_CRITICAL();</span><br><span class="line">    <span class="keyword">return</span> (OS_PRIO_EXIST);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>==不是一开始就初始化堆栈和初始化TCB==</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">OS_STK *<span class="title">OSTaskStkInit</span> <span class="params">(<span class="keyword">void</span> (*task)(<span class="keyword">void</span> *pd), <span class="keyword">void</span> *p_arg, OS_STK *ptos, INT16U opt)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    OS_STK *stk;                                                         </span><br><span class="line">    opt    = opt; </span><br><span class="line">    stk    = ptos;                                  </span><br><span class="line">    *(stk)  = (OS_STK)task;       <span class="comment">/* Entry Point*/</span>  <span class="comment">//是函数的入口地址                                                    //不是SP是因为这只是模拟压栈</span></span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*LR */</span>                               </span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R12*/</span>                               </span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R11*/</span></span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R10*/</span></span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R9*/</span></span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R8*/</span></span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R7*/</span></span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R6*/</span></span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R5*/</span></span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R4*/</span>    </span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R3*/</span></span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R2*/</span></span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>;         	<span class="comment">/*R1*/</span></span><br><span class="line">    *(--stk) = (INT32U)p_arg;		</span><br><span class="line">    *(--stk) = (INT32U)<span class="number">0</span>x <span class="number">0x00000013</span>L;                                </span><br><span class="line">     <span class="keyword">return</span> (stk);   <span class="comment">//              !!!!看这里</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327140011.png" alt="image-20210327140011928"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">INT8U  <span class="title">OS_TCBInit</span> <span class="params">(INT8U prio, OS_STK *ptos, OS_STK *pbos, INT16U id, INT32U stk_size, <span class="keyword">void</span> *pext, INT16U opt)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">           <span class="meta">#<span class="meta-keyword">if</span> OS_CRITICAL_METHOD == 3                               </span></span><br><span class="line">  					  OS_CPU_SR  cpu_sr;</span><br><span class="line">           <span class="meta">#<span class="meta-keyword">endif</span>    </span></span><br><span class="line">    OS_TCB    *ptcb;</span><br><span class="line">OS_ENTER_CRITICAL();</span><br><span class="line">    ptcb = OSTCBFreeList;  <span class="comment">//FreeList总是指向空闲的TCB模块是链表的头指针</span></span><br><span class="line">                           <span class="comment">//牺牲空间赢得时间</span></span><br><span class="line">                               </span><br><span class="line">    <span class="keyword">if</span> (ptcb != (OS_TCB *)<span class="number">0</span>) &#123;<span class="comment">//!=0说明FreeList有空间</span></span><br><span class="line">        OSTCBFreeList = ptcb-&gt;OSTCBNext;          </span><br><span class="line">OS_EXIT_CRITICAL();</span><br><span class="line">        ptcb-&gt;OSTCBStkPtr= ptos;  <span class="comment">//重点是这个值是多少                    </span></span><br><span class="line">        ptcb-&gt;OSTCBPrio = (INT8U)prio;  <span class="comment">//优先级              </span></span><br><span class="line">        ptcb-&gt;OSTCBStat = OS_STAT_RDY; <span class="comment">//让当前任务就绪              </span></span><br><span class="line">        ptcb-&gt;OSTCBDly = <span class="number">0</span>;             <span class="comment">//延迟为0           </span></span><br><span class="line">        pext = pext;                <span class="comment">//     </span></span><br><span class="line">        stk_size = stk_size;        <span class="comment">//</span></span><br><span class="line">        pbos = pbos;                <span class="comment">// 这5排不重要</span></span><br><span class="line">        opt = opt;                  <span class="comment">//</span></span><br><span class="line">        id = id;                    <span class="comment">//     </span></span><br><span class="line"></span><br><span class="line">	ptcb-&gt;OSTCBY =         prio &gt;&gt; <span class="number">3</span>;   <span class="comment">//优先级的高三位即Y的坐标</span></span><br><span class="line">	ptcb-&gt;OSTCBBitY=       OSMapTbl[ptcb-&gt;OSTCBY];<span class="comment">//通过掩码表把Y位置1       </span></span><br><span class="line">    ptcb-&gt;OSTCBX =		   prio &amp; <span class="number">0x07</span>;  <span class="comment">//获得X的坐标</span></span><br><span class="line">	ptcb-&gt;OSTCBBitX=       OSMapTbl[ptcb-&gt;OSTCBX];<span class="comment">//把X位置1</span></span><br><span class="line">        </span><br><span class="line">OS_ENTER_CRITICAL();</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        OSTCBPrioTbl[prio] = ptcb;   <span class="comment">//准备好任务的TCB后挂链</span></span><br><span class="line">        </span><br><span class="line">        ptcb-&gt;OSTCBNext = OSTCBList;                  </span><br><span class="line">        ptcb-&gt;OSTCBPrev = (OS_TCB *)<span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (OSTCBList != (OS_TCB *)<span class="number">0</span>) &#123;</span><br><span class="line">            OSTCBList-&gt;OSTCBPrev = ptcb;</span><br><span class="line">        &#125;</span><br><span class="line">        OSTCBList = ptcb;</span><br><span class="line">        </span><br><span class="line">        OSRdyGrp |= ptcb-&gt;OSTCBBitY;               <span class="comment">//  这两行代码就是进入队列的意思</span></span><br><span class="line">        OSRdyTbl[ptcb-&gt;OSTCBY] |= ptcb-&gt;OSTCBBitX;<span class="comment">//</span></span><br><span class="line">        </span><br><span class="line">OS_EXIT_CRITICAL();</span><br><span class="line">        <span class="keyword">return</span> (OS_NO_ERR);</span><br><span class="line">    &#125;</span><br><span class="line">    OS_EXIT_CRITICAL();</span><br><span class="line">    <span class="keyword">return</span> (OS_NO_MORE_TCB);&#125;</span><br></pre></td></tr></table></figure>
+
+<p>==优先级位图法==</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INT <span class="number">8U</span> OSRdyTbl</span><br><span class="line">INT <span class="number">8U</span> OSRdyGrp[OS_LOWEST_Prio/<span class="number">8</span>+<span class="number">1</span>]    <span class="comment">//因为最低是63</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327144117.png" alt="image-20210327144117514"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">目的由35得到两个变量</span><br><span class="line">35--&gt;00_100_011</span><br><span class="line">OSTCBY--&gt;100_第4排</span><br><span class="line">OSTCBX--&gt;011_第3列</span><br><span class="line">OSTCBBitY--&gt;0001_0000--&gt;OSRdyGrp_0001_0000--&gt;35</span><br><span class="line">OSTCBBitX--&gt;0000_1000--&gt;OSRdyTbl_4_0000_1000--&gt;35</span><br></pre></td></tr></table></figure>
+
+<h2 id="How-to-schedule-tasks-in-the-ready-queue"><a href="#How-to-schedule-tasks-in-the-ready-queue" class="headerlink" title="How to schedule tasks in the ready queue ?"></a>How to schedule tasks in the ready queue ?</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">OS_Sched</span> <span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> OS_CRITICAL_METHOD == 3    </span></span><br><span class="line">    OS_CPU_SR  cpu_sr = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">OS_ENTER_CRITICAL();</span><br><span class="line">    <span class="keyword">if</span> (OSIntNesting == <span class="number">0</span>) &#123;   </span><br><span class="line">        <span class="keyword">if</span> (OSLockNesting == <span class="number">0</span>) &#123;   </span><br><span class="line"> OS_SchedNew();     </span><br><span class="line">            <span class="keyword">if</span> (OSPrioHighRdy != OSPrioCur) &#123; </span><br><span class="line">                OSTCBHighRdy = OSTCBPrioTbl[OSPrioHighRdy]; </span><br><span class="line">                <span class="meta">#<span class="meta-keyword">if</span> OS_TASK_PROFILE_EN &gt; 0   </span></span><br><span class="line">                OSTCBHighRdy-&gt;OSTCBCtxSwCtr++;  </span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">                OSCtxSwCtr++;      </span><br><span class="line">                 OS_TASK_SW();       </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    OS_EXIT_CRITICAL();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>重点在如何找到最高优先级</p>
+<p>不通过链表的方式,优先级位图法,见书105页</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span>  <span class="keyword">void</span>  <span class="title">OS_SchedNew</span> <span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> OS_LOWEST_PRIO &lt;= 63  </span></span><br><span class="line">    INT8U  y;</span><br><span class="line">    y= OSUnMapTbl[OSRdyGrp];           </span><br><span class="line">    OSPrioHighRdy = (INT8U)((y &lt;&lt; <span class="number">3</span>) +</span><br><span class="line">                                             OSUnMapTbl[OSRdyTbl[y]]); </span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span>  </span></span><br><span class="line">    INT8U   y;</span><br><span class="line">    INT16U *ptbl;</span><br><span class="line">    <span class="keyword">if</span> ((OSRdyGrp &amp; <span class="number">0xFF</span>) != <span class="number">0</span>) &#123;</span><br><span class="line">        y = OSUnMapTbl[OSRdyGrp &amp; <span class="number">0xFF</span>];</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        y = OSUnMapTbl[(OSRdyGrp &gt;&gt; <span class="number">8</span>) &amp; <span class="number">0xFF</span>] + <span class="number">8</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> ptbl = &amp;OSRdyTbl[y];</span><br><span class="line">    <span class="keyword">if</span> ((*ptbl &amp; <span class="number">0xFF</span>) != <span class="number">0</span>) &#123;</span><br><span class="line">        OSPrioHighRdy = (INT8U)((y &lt;&lt; <span class="number">4</span>) +</span><br><span class="line">                                          OSUnMapTbl[(*ptbl &amp; <span class="number">0xFF</span>)]);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        OSPrioHighRdy = (INT8U)((y &lt;&lt; <span class="number">4</span>) +</span><br><span class="line">                              OSUnMapTbl[(*ptbl &gt;&gt; <span class="number">8</span>) &amp; <span class="number">0xFF</span>] + <span class="number">8</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327150255.png" alt="image-20210327150255286"></p>
+<h2 id="How-to-switch-tasks-on-uc-OS-II-ARM-2440"><a href="#How-to-switch-tasks-on-uc-OS-II-ARM-2440" class="headerlink" title="How to switch tasks on (uc/OS II+ ARM 2440) ?"></a>How to switch tasks on (uc/OS II+ ARM 2440) ?</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">OSCtxSw:</span><br><span class="line">	STMFD	          SP!, &#123;LR&#125;                ;PC</span><br><span class="line">	STMFD	          SP!, &#123;R0-R12, LR&#125;    ;R0-R12 LR                                     </span><br><span class="line">	MRS	              R0,  CPSR               ;Push CPSR                           </span><br><span class="line">	STMFD	          SP!, &#123;R0&#125;	          </span><br><span class="line">		</span><br><span class="line">    ;----------------------------------------------------------------</span><br><span class="line">	; 	为什么第一排的结果是保存PC 流水线的缘故:) 见图 <span class="number">1.1</span></span><br><span class="line">	;-------------------------------------------------------------------	</span><br><span class="line">    ;----------------------------------------------------------------</span><br><span class="line">	; 		OSTCBCur-&gt;OSTCBStkPtr = SP</span><br><span class="line">	;-------------------------------------------------------------------	</span><br><span class="line">    LDR		R0, =OSTCBCur</span><br><span class="line">	LDR		R0, [R0]</span><br><span class="line">	STR		SP, [R0]</span><br><span class="line">    ;--------------------------------------------------------------------</span><br><span class="line">	; OSTCBCur = OSTCBHighRdy;</span><br><span class="line">	;--------------------------------------------------------------------</span><br><span class="line">	LDR		R0, =OSTCBHighRdy</span><br><span class="line">	LDR		R1, =OSTCBCur</span><br><span class="line">	LDR		R0, [R0]</span><br><span class="line">	STR		R0, [R1]</span><br><span class="line">	</span><br><span class="line">	;--------------------------------------------------------------------</span><br><span class="line">	; OSPrioCur = OSPrioHighRdy;</span><br><span class="line">    ; 为什么要这么折腾</span><br><span class="line">    ; LDR:指令从内存中取<span class="number">32</span>位字或<span class="number">8</span>位无符号字节数据放入寄存器 不可内存到内存</span><br><span class="line">	;--------------------------------------------------------------------</span><br><span class="line">	LDR	          R0, =OSPrioHighRdy</span><br><span class="line">	LDR	          R1, =OSPrioCur</span><br><span class="line">	LDRB	          R0, [R0]</span><br><span class="line">	STRB	          R0, [R1] </span><br><span class="line">    ;----------------------------------------------------------------</span><br><span class="line">	;  OSTCBHighRdy-&gt;OSTCBStkPtr;</span><br><span class="line">	;-----------------------------------------------------------------</span><br><span class="line">	LDR		R0, =OSTCBHighRdy                                            </span><br><span class="line">	LDR		R0, [R0]</span><br><span class="line">	LDR		SP, [R0]</span><br><span class="line">	;-----------------------------------------------------------------</span><br><span class="line">	;Restore New task context</span><br><span class="line">	;-----------------------------------------------------------------</span><br><span class="line">	LDMFD 	SP!, &#123;R0&#125;	;POP CPSR       </span><br><span class="line">	MSR 	           SPSR_cxsf, R0                                                    </span><br><span class="line">	LDMFD           SP!, &#123;R0-R12, LR, PC&#125;^	 </span><br><span class="line">    ;---</span><br><span class="line">    ;^详情见ARM <span class="number">3.3</span><span class="number">.3</span>    </span><br><span class="line">    ;---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210327165502.png" alt="image-20210327165502015"></p>
+<p>​                                                                        图1.1</p>
+<h2 id="Which-events-will-trigger-the-context-switch"><a href="#Which-events-will-trigger-the-context-switch" class="headerlink" title="Which events will trigger the context switch ?"></a>Which events will trigger the context switch ?</h2><p>裸机中断和有操作系统的中断</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210331182024.png" alt="image-20210331182024008"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210331184523.png" alt="image-20210331184523134"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/31/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/" data-id="ckmyawr84000n80wghspu5um2" data-title="嵌入式操作系统笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" rel="tag">学习相关</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">嵌入式操作系统</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/31/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          喜欢的语句
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/31/%E7%9C%8B%E8%BF%99%E9%87%8C/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">看这里</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%A6%E7%B1%8D/">-书籍</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">-课程内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E5%AD%A6/">文学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E5%AD%A6/%E8%AF%BE%E5%A4%96/">课外</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/">日常生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%86%85/">课内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">课程内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%A4%96%E7%9F%A5%E8%AF%86/">课程外知识</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%A4%96%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0/">课程外知识学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9B%E8%BD%B4-%E8%AF%BE%E7%A8%8B%E5%86%85/" rel="tag">-四轴 -课程内</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F-%E5%B0%8F%E6%80%9D%E8%80%83/" rel="tag">-读后感 -小思考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tofel/" rel="tag">Tofel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" rel="tag">喜欢的语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" rel="tag">学习相关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">嵌入式操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%98%E6%8A%84/" rel="tag">摘抄</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/" rel="tag">生活感想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E7%9B%B8%E5%85%B3/" rel="tag">知识相关</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%9B%9B%E8%BD%B4-%E8%AF%BE%E7%A8%8B%E5%86%85/" style="font-size: 10px;">-四轴 -课程内</a> <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F-%E5%B0%8F%E6%80%9D%E8%80%83/" style="font-size: 10px;">-读后感 -小思考</a> <a href="/tags/Tofel/" style="font-size: 10px;">Tofel</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">喜欢的语句</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" style="font-size: 10px;">学习相关</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">学习笔记</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">嵌入式操作系统</a> <a href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 15px;">思维导图</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 10px;">摘抄</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 10px;">数据库</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/" style="font-size: 10px;">生活感想</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E7%9B%B8%E5%85%B3/" style="font-size: 15px;">知识相关</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/31/%E5%B0%8F%E9%99%88%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E5%80%99%E7%9A%84%E9%97%AE%E9%A2%98/">对新手很友好的搭建博客和使用,包含图床配置(因为我本身就是新手)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%80%9D%E8%80%83/">区块链/数字货币</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B%E5%AF%B9t%E5%92%8Cs%E9%98%B5%E5%AE%B9%E7%9A%84%E6%83%B3%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/">喜欢的语句</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/">嵌入式操作系统笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

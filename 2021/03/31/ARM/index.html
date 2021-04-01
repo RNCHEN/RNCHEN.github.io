@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="title: armtags:      - ARM处理器            - 学习相关categories:      - 课内 ARM课程相关笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/03/31/ARM/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="title: armtags:      - ARM处理器            - 学习相关categories:      - 课内 ARM课程相关笔记">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323195115.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323195320.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323200657.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323201905.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323201953.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323202051.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323202111.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323202405.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323203622.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323210443.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323210704.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323211956.png">
+<meta property="og:image" content="c:/Users/24482/AppData/Roaming/Typora/typora-user-images/image-20210323213217223.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323213110.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323213124.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323213341.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323214102.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323225740.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323230715.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323231716.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324085001.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324164404.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324164800.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324165213.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324182952.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324183109.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324185029.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325202333.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324185508.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324183109.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325203047.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325203109.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325213920.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325210150.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325210215.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325214229.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325215018.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325215823.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325220849.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210325230553.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326164404.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324200813.png">
+<meta property="og:image" content="c:/Users/24482/AppData/Roaming/Typora/typora-user-images/image-20210326164922581.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326170912.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324204115.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326172127.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326172355.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326172546.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326173000.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210324205848.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326183543.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326183617.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326184352.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326184822.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326195216.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326200739.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326200956.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210326204716.JPG">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210331193109.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210331193121.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210331201426.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210331202340.png">
+<meta property="article:published_time" content="2021-03-31T15:28:11.969Z">
+<meta property="article:modified_time" content="2021-03-31T13:04:58.370Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323195115.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ARM" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/31/ARM/" class="article-date">
+  <time class="dt-published" datetime="2021-03-31T15:28:11.969Z" itemprop="datePublished">2021-03-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>title: arm<br>tags:<br>      - ARM处理器<br>            - 学习相关<br>categories:<br>      - 课内</p>
+<p>ARM课程相关笔记</p>
+<span id="more"></span>
+
+
+
+<h1 id="第1章-嵌入式系统基础"><a href="#第1章-嵌入式系统基础" class="headerlink" title="第1章 嵌入式系统基础"></a>第1章 嵌入式系统基础</h1><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323195115.png" alt="image-20210323195107921"></p>
+<h2 id="1-1-嵌入式系统简介"><a href="#1-1-嵌入式系统简介" class="headerlink" title="1.1 嵌入式系统简介"></a>1.1 嵌入式系统简介</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><p>理解：==嵌入式系统核心就定制硬、软件。==</p>
+<p>组成：</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323195320.png" alt="image-20210323195320480"></p>
+<h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><p>嵌入式系统的硬件包括：核心处理器、外围电路 和 外部设备三部分，如下图所示：</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323200657.png" alt="image-20210323200657560"></p>
+<h4 id="核心处理器"><a href="#核心处理器" class="headerlink" title="核心处理器"></a>核心处理器</h4><p>嵌入式微处理器可以采用 <strong>冯.诺依曼体系结构</strong> 和 <strong>哈佛体系</strong>结构；指令系统可以采用 精简指令集系统 和 复杂指令集 系统。</p>
+<h5 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h5><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323201905.png" alt="image-20210323201905018"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323201953.png" alt="image-20210323201952842"></p>
+<h5 id="指令集"><a href="#指令集" class="headerlink" title="指令集"></a>指令集</h5><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323202051.png" alt="image-20210323202051659"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323202111.png" alt="image-20210323202111166"></p>
+<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><p>由<strong>嵌入式操作系统</strong>和<strong>嵌入式应用软件</strong>两大部分组成。</p>
+<p>需要注意==嵌入式系统和嵌入式操作系统是两个东西==</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323202405.png" alt="image-20210323202405511"></p>
+<p>有 的版本将应用程序接口 API 归属于 OS 层，就是按照 三层来 划分的。 </p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h2 id="1-2-嵌入式处理器"><a href="#1-2-嵌入式处理器" class="headerlink" title="1.2 嵌入式处理器"></a>1.2 嵌入式处理器</h2><p>（1）嵌入式微处理器（MPU）</p>
+<p>（2）嵌入式微控制器（MCU）</p>
+<p>和嵌入式微处理器相比：微控制器的最大特点是<strong>单片化</strong></p>
+<p>（3）嵌入式DSP处理器 DSP 处理器是专门用于信号处理方面的处理器</p>
+<p>（4）SOC片上系统 SOC最大特点是实现了软/硬件的无缝结合，直接在处理器<strong>芯片内部嵌入操作系统代码模块。</strong></p>
+<h2 id="1-3-嵌入式系统开发环境"><a href="#1-3-嵌入式系统开发环境" class="headerlink" title="1.3 嵌入式系统开发环境"></a>1.3 嵌入式系统开发环境</h2><h2 id="1-4-嵌入式操作系统"><a href="#1-4-嵌入式操作系统" class="headerlink" title="1.4 嵌入式操作系统"></a>1.4 嵌入式操作系统</h2><p>嵌入式操作系统可分为：实时操作系统 和 非实时操作系统。</p>
+<p>按实时性的要求，可分为： </p>
+<ul>
+<li>软实时系统 </li>
+<li> 硬实时系统 </li>
+</ul>
+<p>按任务是否可被抢占，分为 </p>
+<ul>
+<li> 可抢占型系统 </li>
+<li> 不可抢占型系统</li>
+</ul>
+<h1 id="第2章-ARM处理器及系统结构"><a href="#第2章-ARM处理器及系统结构" class="headerlink" title="第2章 ARM处理器及系统结构"></a>第2章 ARM处理器及系统结构</h1><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323203622.png" alt="image-20210323203622616"></p>
+<h2 id="2-1-ARM-处理器简介"><a href="#2-1-ARM-处理器简介" class="headerlink" title="2.1 ARM 处理器简介"></a>2.1 ARM 处理器简介</h2><p>ARM（Advanced RISC Machines）有 3 种含义： </p>
+<ul>
+<li><p> 它是一个公司的名称; </p>
+</li>
+<li><p>是一类微处理器的通称; </p>
+</li>
+<li><p>还是一种技术的名称。</p>
+</li>
+</ul>
+<p>是专门从事基于 RISC 技术芯片开发的公司</p>
+<p>优点</p>
+<p> ① 体积小、功耗低、低成本、高性能； </p>
+<p> ② 支持 Thumb（16位）/ARM（32位）双指令集，能 很好地兼容 8位/16位 器件；</p>
+<p> ③ 大量使用 寄存器，指令执行速度更快；</p>
+<p> <strong>④</strong> <strong>大多数数据操作都在寄存器中完成；</strong></p>
+<p> ⑤ 寻址方式灵活简单，执行效率高；</p>
+<p> <strong>⑥ 指令长度固定</strong></p>
+<blockquote>
+<p>Thumb指令集: Thumb指令可以看做是ARM指令压缩形式的子集，是针对代码密度的问题而提出的，它具有16为的代码密度。<br>使得ARM可以处理16位指令,也能执行32位指令</p>
+</blockquote>
+<p><strong>代码密度</strong></p>
+<h2 id="2-2-ARM-处理器系列"><a href="#2-2-ARM-处理器系列" class="headerlink" title="2.2 ARM 处理器系列"></a>2.2 ARM 处理器系列</h2><h3 id="2-2-1-系列"><a href="#2-2-1-系列" class="headerlink" title="2.2.1 系列"></a>2.2.1 系列</h3><p>一、ARMv4</p>
+<p>二、ARMv4T</p>
+<p>ARMv4T增加了16-bit Thumb 指令集</p>
+<p>三、ARMv5TE</p>
+<p>并在ARM指令集体系结构上<strong>扩展了增强的DSP 指令集:</strong></p>
+<p>四、ARMv5TEJ</p>
+<p>增加了Jazelle扩展以支持Java 加速技术（处理器指令层对JAVA加速）。</p>
+<p>五、ARMv6</p>
+<p>SIMD扩展</p>
+<p>Thumb-2和TrustZone 技术</p>
+<p>六、ARMv7</p>
+<p>ARMv7 定义了 3 种 不 同 的 处 理 器 配 置 （ processor profiles）: </p>
+<p>•Profile A是面向复杂、基于虚拟内存的OS和应用的</p>
+<p> •Profile R是针对实时系统的 </p>
+<p>•Profile M是针对低成本应用的优化的微控制器</p>
+<p>七、ARMv8 </p>
+<p>2011年11月，ARM公司发布了新一代处理器架构ARM V8，<strong>ARM的首个64位架构</strong>。</p>
+<p>ARM处理器指令集的特点 ARM内核不是一个纯粹的RISC体系结构，ARM指令集 与纯粹的RISC的定义有以下几个不同。</p>
+<p> ① 一些特定指令的<strong>周期数可变</strong>，并不是每条ARM指令都是单周期的。</p>
+<p> ② 内嵌的桶形移位器产生了更为复杂的指令，扩展了指令的 功能，因此改善了内核的性能。</p>
+<p> ③ 支持16位的Thumb指令集，提高了代码密度。</p>
+<p> ④ 支持条件执行：每条指令都可以设置一个执行条件，只有 条件满足时才执行。 </p>
+<p> ⑤ 增强指令：一些功能强大的数字信号处理指令被加入到 ARM指令集中</p>
+<h3 id="2-2-2-ARM体系结构的演变"><a href="#2-2-2-ARM体系结构的演变" class="headerlink" title="2.2.2 ARM体系结构的演变"></a>2.2.2 ARM体系结构的演变</h3><ul>
+<li><p>arm7  代码密度高并兼容16位的Thumb指令集；</p>
+</li>
+<li><p>==arm9 采用 <strong>5级指令流水线</strong>。存储器系统根据 （改进型）<strong>哈弗体系结构</strong>（程序和数据空间独立的体系结构） 重新设计，区分了 数据总线 和 指令总线==</p>
+<blockquote>
+<p>我目前看到的资料ARM9的5条流水线是最多的,但是有说7条的,这个还有待考证</p>
+</blockquote>
+</li>
+</ul>
+<p>​       MPU支持实时操作系统；</p>
+<ul>
+<li>ARM9E  支持DSP指令集，适合于需要高速数字信号处理的场合；(有一张ppt说明了命名的规则)</li>
+<li>ARM10E 6条流水线</li>
+<li>ARM 11 内核有8级流水线</li>
+</ul>
+<h2 id="2-3-ARM9-处理器内核"><a href="#2-3-ARM9-处理器内核" class="headerlink" title="2.3 ARM9 处理器内核"></a>2.3 ARM9 处理器内核</h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323210443.png" alt="image-20210323210443224"></p>
+<h3 id="2-3-1-ARM9系列MCU"><a href="#2-3-1-ARM9系列MCU" class="headerlink" title="2.3.1 ARM9系列MCU"></a>2.3.1 ARM9系列MCU</h3><p>一、ARM9TDMI</p>
+<p>ARM9TDMI使用<strong>哈弗结构</strong>，通过cache可以<strong>同时读取指令和数据。</strong></p>
+<p> 流水线从ARM7TDMI的 <strong>3级 增加到 5级。</strong></p>
+<p>二、ARM920T</p>
+<p>三、ARM940T</p>
+<h3 id="2-3-2-流水线"><a href="#2-3-2-流水线" class="headerlink" title="2.3.2 流水线"></a>2.3.2 流水线</h3><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323210704.png" alt="image-20210323210704741"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> gantt</span><br><span class="line">        dateFormat  X</span><br><span class="line">title 5级指令流水线（ppt没给只好自己画了请忽略下面的时间线）</span><br><span class="line"> section B section</span><br><span class="line">        取址fetch            : done   des1,1,2</span><br><span class="line">        译码decode    :  des2, 2, 3</span><br><span class="line">        执行execute:       des3,3 ,4</span><br><span class="line">        缓存:     des4,  4,5 </span><br><span class="line">        回写: des5,5,6</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>…还是网上的图比较给力</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323211956.png" alt="image-20210323211956396"></p>
+<p><img src="C:\Users\24482\AppData\Roaming\Typora\typora-user-images\image-20210323213217223.png" alt="image-20210323213217223"></p>
+<p>书上居然有…….</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323213110.png" alt="image-20210323213110510"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323213124.png" alt="image-20210323213123917"></p>
+<h2 id="2-4-ARM-处理器工作状态-2种"><a href="#2-4-ARM-处理器工作状态-2种" class="headerlink" title="2.4 ARM 处理器工作状态   2种"></a>2.4 ARM 处理器工作状态   2种</h2><p><strong>2种工作状态</strong></p>
+<p>分别为ARM指令集和Thumb指令</p>
+<p>其中ARM指令集 为32位（字）长度，具有最完整的功能；Thumb指令集为 16位（半字）长度，能实现ARM指令集的大部分功能</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323213341.png" alt="image-20210323213341097"></p>
+<p>ARM指令集与Thumb指令集不能同时混合使用。</p>
+<p>使用BX分支指令将ARM内核的操作 状态在ARM和Thumb之间进行切换</p>
+<h2 id="2-5-ARM-处理器运行模式-7种"><a href="#2-5-ARM-处理器运行模式-7种" class="headerlink" title="2.5 ARM 处理器运行模式     7种"></a>2.5 ARM 处理器运行模式     7种</h2><p>（1）用户模式（USR）： 正常程序执行模式，大部分任务执行在这种模式下。 用户模式是用户程序的工作模式。该<strong>没有权限去操作其它硬件资源</strong>，也不能切换到其它模式下。 </p>
+<p>（2）系统模式（SYS）： 系统模式是特权模式，不受用户模式的限制。用户模式和系统模式共用一套寄存器，但比用户模式有更高的权限， 可以访问所有系统资源及进行模式切换。 </p>
+<p>（3）一般中断模式（IRQ）： 一般中断模式也叫通用中断模式，用于处理一般的中断请求，通常在<strong>硬件产生中断信号</strong>之后自动进入该模式，该模式为特权模式，可以<strong>自由访问系统硬件资源</strong>。 </p>
+<p>（4）快速中断模式（FIQ）： 快速中断模式是相对一般中断模式而言的，它是用来处理对时间要求比较紧急的中断请求，主要用于高速数据传输及通道处理中，<strong>其中断优先级相对普通中断更高。</strong></p>
+<p>（5）管理模式（Supervisor，SVC） ： 管理模式是CPU上电后默认模式，因此在该模式下主要 用来做系统的初始化，软中断处理也在该模式下。系统复位或开机、软中断时进入到SVC模式下。 </p>
+<p>（6）中止模式（ABT）： 中止模式用于支持虚拟内存或存储器保护，当用户程序 访问非法地址，没有权限读取的内存地址时，会进入该模式。</p>
+<p>（7）未定义模式（UND）： CPU在指令的译码阶段不能识别该指令操作时，会进入 未定义模式，进行未定义陷阱处理。</p>
+<blockquote>
+<p>软中断和硬中断相关知识可参考以下链接<a target="_blank" rel="noopener" href="https://blog.csdn.net/ll148305879/article/details/90902282?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161651054116780261931023%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161651054116780261931023&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-2-90902282.pc_search_result_cache&utm_term=%E8%BD%AF%E4%B8%AD%E6%96%AD%E5%92%8C%E7%A1%AC%E4%B8%AD%E6%96%AD%E7%9A%84%E5%8C%BA%E5%88%AB">^1</a></p>
+</blockquote>
+<ul>
+<li>特权模式 除用户模式外的其它6种处理器模式称为特权模式 （Privileged Modes）。在特权模式下，程序可以访问<strong>所有的系统资源</strong>，也可以任意的进行处理器模式切换。 只有在特权模式下才允许对当前程序状态寄存器（CPSR） 的所有控制位<strong>直接</strong>进行读/写访问，而在非特权模式下只允许 对CPSR的控制位进行<strong>间接访问</strong>（SWI方式）。</li>
+</ul>
+<blockquote>
+<p>SWI中断指令<a target="_blank" rel="noopener" href="https://blog.csdn.net/zqixiao_09/article/details/50776191?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161651119016780269888720%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161651119016780269888720&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-2-50776191.pc_search_result_cache&utm_term=swi">^2</a></p>
+</blockquote>
+<ul>
+<li>异常模式 特权模式中除系统模式之外的其他5种模式又统称为异常 模式。它们除了可以通过在特权下的程序切换进入外，也可 以由特定的异常进入。其中管理模式也称为超级用户模式， 是为操作系统提供软中断的特有模式。 大多数的用户程序运行在用户模式下。当处理器工作在 用户模式时，需要进行处理器模式切换时，应用程序可以产 生异常处理，在异常处理过程中进行处理器模式切换。这种体系结构可以使操作系统控制整个系统资源的使用。</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323214102.png" alt="image-20210323214101982"></p>
+<h2 id="2-6-ARM-寄存器"><a href="#2-6-ARM-寄存器" class="headerlink" title="2.6 ARM 寄存器"></a>2.6 ARM 寄存器</h2><p>37个用户可见寄存器</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323225740.png" alt="image-20210323225740372"></p>
+<h3 id="通用寄存器"><a href="#通用寄存器" class="headerlink" title="通用寄存器"></a>通用寄存器</h3><p>（1）未分组寄存器，包括 R0~R7； 在所有处理器模式下对于每一个未分组寄存器来说，指 的都是同一个物理寄存器。</p>
+<p>（2）分组寄存器，包括 R8~R14。 它们每一个访问的物理寄存器取决于当前的处理器模式。</p>
+<h3 id="值得记忆的有名字的寄存器"><a href="#值得记忆的有名字的寄存器" class="headerlink" title="值得记忆的有名字的寄存器"></a>值得记忆的有名字的寄存器</h3><p><strong>SP</strong> -&gt;  中用户模式和系统模式共用一个，每种异常模式都有专用的R13寄存器。说ARM处理器允许用户程序有6个不同的堆栈空间</p>
+<p><strong>LR</strong> -&gt;</p>
+<p> (1)在各种模式下，R14用来保存子程序的返回地址。当一 条BL或者BLX指令执行子程序调用时，R14设为子程序的返回地址。</p>
+<blockquote>
+<p>BL:  带链接的跳转。 首先将当前指令的下一条指令地址保存在LR寄存器，然后跳转的lable。通常用于调用子程序，可通过在子程序的尾部添加mov pc, lr 返回。</p>
+<p>更具体的汇编指令在第二章番外章 汇编指令</p>
+</blockquote>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323230715.png" alt="image-20210323230715221"></p>
+<p> (2)当发生异常时，相关异常模式下的R14就设为异常返回地 址。异常的返回地址与子程序的返回类似。区别在于有些 异常有一个小常量的偏移。</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210323231716.png" alt="image-20210323231715926"></p>
+<p><strong>PC</strong></p>
+<p>在<strong>ARM状态</strong>，位[1:0]为0，位[31:2]保存PC。<strong>在Thumb状态</strong>，位[0]为0，位[31:1]保存PC。</p>
+<blockquote>
+<p>bit[m:n]表示从第n位到第m位</p>
+</blockquote>
+<p>程序计数器R15（即PC）总是指向<strong>“正在取指”</strong>的指令，而不是指向<strong>“正在执行”</strong>的指令或正在“译码”的指令。</p>
+<p>不再是PC+“1”</p>
+<p>PC总是指向第3条指令，或者说PC总是指向当前正 在执行的指令地址再加2条指令的地址<br>具体区别看是ARM状态还是Thumb状态</p>
+<h3 id="状态寄存器"><a href="#状态寄存器" class="headerlink" title="状态寄存器"></a>状态寄存器</h3><ul>
+<li><p><strong>cpsr</strong><br>（CPSR）可以在任何处理器模式下被访问</p>
+</li>
+<li><p><strong>spsr</strong></p>
+</li>
+</ul>
+<p>每一种异常器模式下，都有一个专用的物理寄存器做 备份程序状态寄存器（SPSR： SavedProgram Status Register ）。当特定的异常中断发生时，这个物理寄存器 负责存放当前程序状态寄存器的内容。当异常处理程序返 回时，再将其内容恢复到当前程序状态寄存器。</p>
+<h3 id="标志位"><a href="#标志位" class="headerlink" title="标志位"></a>标志位</h3><ul>
+<li>条件标志位</li>
+</ul>
+<p> 这些条件标志位会根据程序中的算数指令或逻辑指令的 执行结果进行改变，而且这些条件标志位可由大多数指令检 测以决定指令是否执行。</p>
+<ul>
+<li>Q标志位（了解）</li>
+<li>控制位</li>
+</ul>
+<h3 id="ARM与Thumb的寄存器"><a href="#ARM与Thumb的寄存器" class="headerlink" title="ARM与Thumb的寄存器"></a>ARM与Thumb的寄存器</h3><p>ARM状态寄存器与Thumb状态寄存器有如下的关系：</p>
+<p>① Thumb状态R0 ~ R7与ARM状态R0 ~ R7相同。 </p>
+<p>② Thumb状态CPSR（无SPSR）与ARM状态CPSR相同。 由于Thumb指令集不包含MSR和MRS指令，如果用户 需要修改CPSR的任何标志位，必须回到ARM模式。</p>
+<p>③ Thumb状态SP映射到ARM状态R13；</p>
+<p>④ Thumb状态LR映射到ARM状态R14；</p>
+<p>⑤ Thumb状态PC映射到ARM状态R15（PC）</p>
+<p>注意：<strong>所有的异常处理都是在ARM状态下执行的</strong>，在Thumb 状态下，如果有任何中断或者异常标志出现，那么处理器就 会<strong>自动切换到ARM</strong>状态去进行异常处理，当异常处理完毕返 回时，处理器又会自动切换返回到Thumb状态，状态切换过 程如下图所示。</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324085001.png" alt="image-20210324084954188"></p>
+<blockquote>
+<p>寄存器 R8~R12为高端寄存器。</p>
+</blockquote>
+<h3 id="Thumb状态中访问高端寄存器"><a href="#Thumb状态中访问高端寄存器" class="headerlink" title="Thumb状态中访问高端寄存器"></a>Thumb状态中访问高端寄存器</h3><p>MOV、ADD、CMP才能访问高端寄存器</p>
+<h2 id="2-7-ARM-存储系统"><a href="#2-7-ARM-存储系统" class="headerlink" title="2.7 ARM 存储系统"></a>2.7 ARM 存储系统</h2><p>采用冯诺依曼体系,<strong>指令和数据共用一条32位数据线</strong><br>只有装载、存储和交换指令可访问存储器中的数据。</p>
+<blockquote>
+<p>在大端模式下，一个字的高地址放的是数据的低位；而在小端模式下，数据的低位放在内存中低地址。</p>
+</blockquote>
+<p>ARM指令集<strong>不包含</strong>任何直接选择大小端存储器格式的指令<br>基于ARM的芯片可以通过硬件配置<br>对于S3C2440是通过<strong>软件</strong>来指定存储器格式的</p>
+<h3 id="存储器映射I-O"><a href="#存储器映射I-O" class="headerlink" title="存储器映射I/O"></a>存储器映射I/O</h3><p>基于ARM内核的芯片具有许多的外设，这些外设访问的 标准方法是使用存储器映射的I/O（存储器统一编址），为外设的每个寄存器都分配一个地址。</p>
+<h2 id="2-8-中断和异常的基本概念（不考）"><a href="#2-8-中断和异常的基本概念（不考）" class="headerlink" title="2.8 中断和异常的基本概念（不考）"></a>2.8 中断和异常的基本概念（不考）</h2><h2 id="2-9-ARM-的异常-7种"><a href="#2-9-ARM-的异常-7种" class="headerlink" title="2.9 ARM 的异常 7种"></a>2.9 ARM 的异常 7种</h2><p>ARM异常与中断不做严格意义上的区别。</p>
+<p>ARM处理器可以响应的中断（异常）有：中断、快中断、 复位中断、软中断异常、预取指令中止异常、数据中止异常 和 未定义指令异常 7 种</p>
+<h3 id="2-9-1-ARM的中断（异常）向量表"><a href="#2-9-1-ARM的中断（异常）向量表" class="headerlink" title="2.9.1 ARM的中断（异常）向量表"></a>2.9.1 ARM的中断（异常）向量表</h3><blockquote>
+<p>公共入口设置的必要性   记得当时讲的是堆栈</p>
+</blockquote>
+<p>ARM有低端和高端两种向量表</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324164404.png" alt="image-20210324164404458"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324164800.png" alt="image-20210324164800326"></p>
+<h3 id="2-9-2-ARM异常响应"><a href="#2-9-2-ARM异常响应" class="headerlink" title="2.9.2 ARM异常响应"></a>2.9.2 ARM异常响应</h3><p>一、进入异常 在异常发生后，ARM内核会作以下工作：</p>
+<ol>
+<li><p>在适当的LR中保存下一条指令的地址，当异常入口来自： 无论是ARM状态还是Thumb状态，<strong>ARM都将当前运行指令地址加4或加8复制(取决于异常的类型) 到LR中</strong>；</p>
+</li>
+<li><p>把当前程序状态寄存器（CPSR）中的内容保存到模式私 有寄存器SPSR中；2.9 ARM的中断（异常）</p>
+</li>
+<li><p>将寄存器CPSR中的MODE域设置为中断（异常）应进入 的运行模式； </p>
+</li>
+<li><p>对CPSR的I位和F位进行相应的设置，以防止再次响应同 一个中断请求。 </p>
+</li>
+<li><p>强制PC从相关的异常向量处取指，即到中断向量表中获 取中断向量，转向用户所编写的中断（异常）服务程序。 注：异常总是在ARM状态中进行处理。当处理器处于 Thumb状态时发生了异常，在异常向量地址装入PC时，会 自动切换到ARM状态。</p>
+</li>
+</ol>
+<p>二、异常返回<br>当异常结束时，异常处理程序必须做如下处理：</p>
+<ol>
+<li><p>将SPSR的值复制回CPSR</p>
+</li>
+<li><p>将LR中的值减去偏移量后存入PC，偏移量根据异常<br>的类型而有所不同。</p>
+<blockquote>
+<p>另一个东西+4或者+8根据流水线来决定,</p>
+<p>有回写就是-8</p>
+<p>无回写就是-4</p>
+</blockquote>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324165213.png" alt="image-20210324165213700"></p>
+</li>
+</ol>
+<p>程序执行时，PC的初值为程序第一条指令的地址</p>
+<h1 id="第2章-番外-汇编指令"><a href="#第2章-番外-汇编指令" class="headerlink" title="第2章 番外 汇编指令"></a>第2章 番外 汇编指令</h1><p>MRS       MSR</p>
+<ol>
+<li>MRS：M—move，R—表示通用寄存器，S—表示特殊寄存器，</li>
+<li>CPSID I：快速屏蔽中断，所有中断（除NMI，复位中断，还有硬件中断）</li>
+<li>BX LR：返回LR</li>
+</ol>
+<p>ldr命令：把数据从内存加载到寄存器。</p>
+<p>str命令：把数据从寄存器保存到内存。</p>
+<h1 id="第3章-ARM指令集"><a href="#第3章-ARM指令集" class="headerlink" title="第3章 ARM指令集"></a>第3章 ARM指令集</h1><h2 id="1、ARM指令集简介"><a href="#1、ARM指令集简介" class="headerlink" title="1、ARM指令集简介"></a>1、ARM指令集简介</h2><h4 id="一、用助记符表示的ARM指令"><a href="#一、用助记符表示的ARM指令" class="headerlink" title="一、用助记符表示的ARM指令"></a>一、用助记符表示的ARM指令</h4><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324182952.png" alt="image-20210324182952408"></p>
+<p>所有的指令长度 都是32位 ，并且<strong>大多</strong>数指令都在一个单独指令周期内执行。</p>
+<ul>
+<li><p>==指令是条件执行的;==</p>
+</li>
+<li><p>ARM微处理器的指令集是加载/存储型的； </p>
+</li>
+<li><p>在多寄存器操作指令中一次最多可以完成 16个寄存器的数据传送</p>
+</li>
+</ul>
+<p>指令ADDEQS R0,R1,#8；</p>
+<p>执行结果：R0 = R1+ 8</p>
+<p>不带S，计算结果不影响CPSR寄存器。</p>
+<p>加上后缀EQ，表示“满足条件相等则跳转”</p>
+<h4 id="二、指令的机器码"><a href="#二、指令的机器码" class="headerlink" title="二、指令的机器码"></a>二、指令的机器码</h4><p>用32位的二进制数表示</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324183109.png" alt="image-20210324183109621"></p>
+<h4 id="三、指令的可选后缀"><a href="#三、指令的可选后缀" class="headerlink" title="三、指令的可选后缀"></a>三、指令的可选后缀</h4><ol>
+<li>   S    后缀 指令中使用S后缀时，指令执行后程序状态寄存器的条件标 志位将被刷新</li>
+</ol>
+<p>2） !    后缀 如果指令地址表达式中含！</p>
+<p>​        基址寄存器中的值（指令执行后）＝指令执行前的值＋地址偏移量</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324185029.png" alt="image-20210324185029186"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325202333.png" alt="image-20210325202326790"></p>
+<p>3）B后缀 B后缀的含义是：指令所涉及的数据是一个字节，</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324185508.png" alt="image-20210324185508091"></p>
+<p>ARM 指令可以分为：</p>
+<ul>
+<li>分支指令</li>
+</ul>
+<p>分支指令用于控制程序的执行流程、<strong>实现ARM代码与 Thumb代码之间进行切换。</strong>==b则流水线清空==</p>
+<ul>
+<li>数据处理指令</li>
+</ul>
+<p>数据处理指令在通用寄存器上执行计算，主要分为3种 ：算术/逻辑指令、比较指令和乘法指令</p>
+<ul>
+<li>存储访问指令</li>
+</ul>
+<p>用于加载/存储存放于MCU片外存储系统中的数据。加 载指令用于从内存中读取数据放入寄存器中，存储指令用于 将寄存器中的数据保存到内存中。</p>
+<ul>
+<li>协处理器指令</li>
+</ul>
+<p>ARM协处理器指令用于控制外部的协处理器。包括 ⚫ 数据处理指令：启动一个协处理器专用的内部操作。 ⚫ 数据转移指令：使数据在协处理器和存储器之间进行转 移。 ⚫ 寄存器转移指令：协处理器值转移到ARM寄存器或 ARM寄存器的值转移到协处理器</p>
+<ul>
+<li>杂项指令五类<br>包括状态寄存器转移指令和异常中断产生指令。 ⚫ 状态寄存器转移指令将CPSR或SPSR的内容转移到一个 通用寄存器，或者反过来将通用寄存器的内容写入CPSR 或SPSR寄存器 ⚫ ARM有 两条 异常中断产生指令，分别为 软中断指令 SWI 和 断点中断指令BKPT。</li>
+</ul>
+<h2 id="2、ARM指令寻址方式"><a href="#2、ARM指令寻址方式" class="headerlink" title="2、ARM指令寻址方式"></a>2、ARM指令寻址方式</h2><p>这个图很重要  :)</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324183109.png" alt="image-20210324183109621"></p>
+<h3 id="3-2-1-立即数寻址-8位位图法很重要"><a href="#3-2-1-立即数寻址-8位位图法很重要" class="headerlink" title="3.2.1 立即数寻址    8位位图法很重要"></a>3.2.1 立即数寻址    8位位图法很重要</h3><p>如何判断该立即数是否合法</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325203047.png" alt="image-20210325203047037"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325203109.png" alt="image-20210325203108935"></p>
+<p>==8位位图==</p>
+<blockquote>
+<p>operand2的常数表达式有如下规定：“该常数必须对应8位位图，即常数是由一个8位的常数<strong>循环右移偶数</strong>位得到的。</p>
+</blockquote>
+<blockquote>
+<p>我们可以从图片中看出：一条指令的后 12 位（bit 11~0），是指令中立即数占用的位数。其中这 12 位又分为两部分：前 7～0 位是数值部分；后 11～8 位是前 7～0 位要进行移位操作的移位数。<a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_41104353/article/details/83097466?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161667555916780274187148%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161667555916780274187148&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-83097466.pc_search_result_cache&utm_term=ARM%E7%AB%8B%E5%8D%B3%E6%95%B0%E5%AF%BB%E5%9D%80">^3</a></p>
+<p>如果一个立即数小于 0xFF（255）那么直接用前 7～0 位表示即可，此时不用移位，11～8 位的 Rotate_imm 等于 0。</p>
+<p>如果前八位 immed_8 的数值大于 255，那么就看这个数是否能有 immed_8 中的某个数移位 2*Rotate_imm 位形成的。如果能，那么就是合法立即数；否则非法。</p>
+</blockquote>
+<p>记得一定是移位偶数个</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325213920.png" alt="image-20210325213920847"></p>
+<p>嘿我悟了:grinning:</p>
+<p>判断小技巧<a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_41104353/article/details/83097466?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161667555916780274187148%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161667555916780274187148&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-83097466.pc_search_result_cache&utm_term=ARM%E7%AB%8B%E5%8D%B3%E6%95%B0%E5%AF%BB%E5%9D%80">^3</a><br>快速判断一个数是不是有效立即数的方法是看从右至左0的个数是否为偶数</p>
+<p>我来解释一下：比如上面那个 #0x0000f200，其中我们猜测 Immed_8 为 1111 | 0010，这个数右边还有 0000 | 0000 |，是偶数个 0，因此是有效立即数。而我们看 0x132，我们猜测 Immed_8 为 1001 | 1001，右边只有一个 0，因此不是有效立即数。</p>
+<p>==这个题要使得偏移量最小!!!!!!==真尼玛阴间</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325210150.png" alt="image-20210325210150311"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">由机器码得到4800 并且偏移量最小</span><br><span class="line">C48固然可以,但是偏移量是24</span><br><span class="line"></span><br><span class="line">1011 0001 0010 右移 22 位变成 10|01 00|01 00|10 00|00 00|00 00</span><br><span class="line">                                       4     8     0     0  </span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325210215.png" alt="image-20210325210215840"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A: 0001|0011|0010   奇数</span><br><span class="line">B: 0010|0110|0100   偶数</span><br><span class="line">C: 0010|0110|0110   奇数</span><br><span class="line">D: 0100|1100|1000   奇数</span><br></pre></td></tr></table></figure>
+
+
+
+<p>给定立即数0x00012800，求立即寻址时，指令的低12位是什么？<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35544379/article/details/105006517">^4</a></p>
+<p>可以看到，这个题目是例1的反向求解，已知立即数求指令</p>
+<p>首先，将立即数转换为二进制0000 | 0000 | 0000 | 0001 | 0010 | 1000 | 0000 | 0000</p>
+<p>第二步，将二进制中的关键8位提取出来，因为循环移位必定是移动偶数位的，所以我们提取的时候要保证我们找的关键8位在原二进制中是处于偶数位的</p>
+<p>因此在这里我们提取的是01 | 0010 | 10，而不是1 | 0010 | 100（这里的|对应原二进制|的位置，便于读者观察），关键8位的16进制表示为0x4a</p>
+<p>第三步，将提取出来的关键8位放到二进制的最右边，构成一个待移动二进制串<br>0000 | 0000 | 0000 | 0000 | 0000 | 0000 | 0100 | 1010</p>
+<p>第四步，对第三步的待移动二进制串进行循环右移操作，使得循环右移后的结果与原二进制串一致，记录移动的位数，即<br>0000 | 0000 | 0000 | 0000 | 0000 | 0000 | 0100 | 1010 循环右移 =&gt; 0000 | 0000 | 0000 | 0001 | 0010 | 1000 | 0000 | 0000</p>
+<p>得移动位数为22位，等于0xb * 2</p>
+<p>第五步，合并第二步得到的关键8位和第四步的移动位数，为0xb4a</p>
+<h3 id="3-2-2-寄存器寻址"><a href="#3-2-2-寄存器寻址" class="headerlink" title="3.2.2 寄存器寻址"></a>3.2.2 寄存器寻址</h3><h3 id="3-2-3-寄存器移位寻址"><a href="#3-2-3-寄存器移位寻址" class="headerlink" title="3.2.3 寄存器移位寻址"></a>3.2.3 寄存器移位寻址</h3><ul>
+<li>寄存器移位寻址</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325214229.png" alt="image-20210325214229288"></p>
+<ul>
+<li>第二操作数移位方式</li>
+</ul>
+<p>当第二操作数为寄存器型时，在执行寄存器寻址操作时，也可以对第二操作数寄存器进行移位，此时第二操作数形式为： ADD Rd, Rn, <strong>Rm</strong>，{shift} 其中： ➢Rm 称为第二操作数寄存器</p>
+<p>LSL 逻辑左移  空出的最低有效位用0填充。</p>
+<p>LSR 逻辑右移  空出的最高有效位用0填充。</p>
+<p>ASL 算术左移 LSL同</p>
+<p>ASR 算术右移 <em>如果源操作数是正数，空出的最高有效位用0填充，如果是负数 用1填充。</em></p>
+<p>ROR 循环右移 </p>
+<p>RRX 带扩展的循环右移  将寄存器的内容循环右移1位，<em>空位用原来C标志位填充</em></p>
+<ul>
+<li>第二操作数的移位位数</li>
+</ul>
+<p>可有立即数或是寄存器给出</p>
+<h3 id="3-2-4-寄存器间接寻址"><a href="#3-2-4-寄存器间接寻址" class="headerlink" title="3.2.4 寄存器间接寻址"></a>3.2.4 寄存器间接寻址</h3><p>操作数本身存放在存储器中</p>
+<h3 id="3-2-5-基址变址寻址"><a href="#3-2-5-基址变址寻址" class="headerlink" title="3.2.5 基址变址寻址"></a>3.2.5 基址变址寻址</h3><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325215018.png" alt="image-20210325215018576"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325215823.png" alt="image-20210325215823092"></p>
+<ul>
+<li><p>前变址</p>
+<p>先基址+偏址，生成操作数地址，再做指令指定的操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STR r0,[r1,#12]</span><br></pre></td></tr></table></figure></li>
+<li><p>自动变址</p>
+<p>先基址+偏移，生成操作数地址，做指令指定的操作。<strong>然后自动修改基址寄存器。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDR R0，[R1，＃<span class="number">4</span>]！ //这里有感叹号</span><br></pre></td></tr></table></figure></li>
+<li><p>后变址寻址</p>
+<p>基址寄存器<strong>不加偏移作为操作数地址。</strong> </p>
+<p>完成指令操作后，用(基址+偏移)的值修改基址寄存器。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STR r0,[r1],#<span class="number">12</span> <span class="comment">// 注意[]位置</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="3-2-6-多寄存器寻址"><a href="#3-2-6-多寄存器寻址" class="headerlink" title="3.2.6 多寄存器寻址"></a>3.2.6 多寄存器寻址</h3><p>用一条指令最多可传送16个通用寄存 器的值。连续的寄存器间用“-”连接，否则用“ ， ”</p>
+<p>对于所有LDM/STM指令而言，寄存器序号低的，在低地址单元，序号大的在高地址单元！</p>
+<p>即LR等先于R0等入栈出栈</p>
+<h3 id="3-2-7-堆栈寻址"><a href="#3-2-7-堆栈寻址" class="headerlink" title="3.2.7 堆栈寻址"></a>3.2.7 堆栈寻址</h3><p>LDMIA/STMIA Increment After(先传送，后地址加4)<br>LDMIB/STMIB Increment Before(先地址加4 ,后传送)<br>LDMDA/STMDA Decrement After(先传送，后地址减4)<br>LDMDB/STMDB Decrement Before (先地址减4,后传送)</p>
+<p>满递增堆栈FA(Full Ascending)：堆栈指针指向最后压 入的数据，且由低地址向高地址生长。 </p>
+<p>满递减堆栈FD(Full Descending ） ：堆栈指针指向最后 压入的数据，且由高地址向低地址生长。 </p>
+<p>空递增堆栈EA(Empty Ascending)：堆栈指针指向下一 个将要放入数据的空位置，且由低地址向高地址生长。 </p>
+<p>空递减堆栈ED(Empty Descending)：堆栈指针指向下一 个将要放入数据的空位置，且由高地址向低地址生长。</p>
+<p><strong>重点在D和A上</strong></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325220849.png" alt="image-20210325220849765"></p>
+<p>注意入栈出栈第一个操作数是多少</p>
+<h3 id="3-2-8-相对寻址"><a href="#3-2-8-相对寻址" class="headerlink" title="3.2.8 相对寻址"></a>3.2.8 相对寻址</h3><p>好像不是很重要来着唉嘿</p>
+<h2 id="3、ARM指令集"><a href="#3、ARM指令集" class="headerlink" title="3、ARM指令集"></a>3、ARM指令集</h2><h3 id="3-3-1-分支指令"><a href="#3-3-1-分支指令" class="headerlink" title="3.3.1 分支指令"></a>3.3.1 分支指令</h3><h4 id="跳转指令-B-及带连接的跳转指令-BL"><a href="#跳转指令-B-及带连接的跳转指令-BL" class="headerlink" title="跳转指令 B 及带连接的跳转指令 BL"></a>跳转指令 B 及带连接的跳转指令 BL</h4><ul>
+<li><p>一种是使用分支转移指令直接跳转；</p>
+</li>
+<li><p>另一种则是直接向PC寄存器赋值来实现跳转。</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210325230553.png" alt="image-20210325230553430"></p>
+</li>
+</ul>
+<p>写汇编程序时，可以跳转到一个绝对地址，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B 0x1234 </span><br></pre></td></tr></table></figure>
+
+<p>编译器会把该<strong>绝对地址转换为相对地址</strong>放入指令中</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326164404.png" alt="image-20210326164357576"></p>
+<p>signed_immed_24 间接提供目标地址，真正的目标地址是由处理器根据这个有符号数和当前的PC值计算出来的。</p>
+<p>具体计算为：先将 signed_immed_24 左移两位（即具有26位的偏移量），并扩展为32位有符号数，然后再将这32位有符号数与 PC 的当前值相加，得到实际的跳转地址。<br>因此B 和 BL 指令转移的偏移量为 26 位，即转移的跨度为前后 <strong>32MB</strong> 地址空间。</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324200813.png" alt="image-20210324200806376"></p>
+<p>所以这个题的偏移量是0，流水线的缘故</p>
+<h4 id="带状态切换的跳转指令BX"><a href="#带状态切换的跳转指令BX" class="headerlink" title="带状态切换的跳转指令BX"></a>带状态切换的跳转指令BX</h4><p>BX 指令的格式为： BX{<cond>} Rm<br>• cond表示指令执行条件<br>• Rm[0]为1时，强制程序从ARM指令状态跳转到Thumb指令状态。<br>• Rm[0]为0时，强制程序从Thumb 指令状态跳转到ARM指令状态。<br>• 功能: 跳转到指令中所指定的目标地址，并实现状态切换<br>• Rm寄存器，值是<strong>绝对地址值</strong>，不是偏移量，在指令执行后，Rm中的地址值与#0XFFFF FFFE 进行 “与” 运算，再被复制到程序计数器PC。</p>
+<blockquote>
+<p>把除了最后一位的其他位置1有什么用</p>
+</blockquote>
+<p>•（T&lt;-Rm[0]）</p>
+<p>下图为 CPSR</p>
+<p><img src="C:\Users\24482\AppData\Roaming\Typora\typora-user-images\image-20210326164922581.png" alt="cpsr"></p>
+<h3 id="3-3-2-数据处理指令"><a href="#3-3-2-数据处理指令" class="headerlink" title="3.3.2 数据处理指令"></a>3.3.2 数据处理指令</h3><p>1、ARM数据处理指令的功能<br>主要完成寄存器中数据的算术和逻辑运算操作。<br>2、ARM数据处理指令的特点<br>• 操作数来源：所有的操作数要么来自寄存器，要么来自立即数，==不会来自存储器。==<br>• 操作结果：如果有结果，则结果一定是为32位宽、或64位宽（长乘法指令），并且放在一个或两个==寄存器==中，==不会写入存储器。==<br>• 有第二个操作数（除了乘法指令） Operand2 ：切记其三种形式：立即数、寄存器、寄存器移位。<br>• 乘法指令的操作数：==全部是寄存器。==</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326170912.png" alt="image-20210326170912665"></p>
+<p>数据处理指令对程序状态寄存器CPSR的影响:</p>
+<p>比较指令 （CMP和CMN）</p>
+<p>测试指令     (TST和TEQ)     不需要后缀S，它们总会直接影响CPSR中的状态标志。</p>
+<p>关于恢复CPSR原值问题：<br>如果指令带有S后缀（除了比较指令以外），同时又以PC为目标寄存器进行操作:<br>• 在异常模式下：则操作的同时从SPSR恢复CPSR</p>
+<p>==用户和系统模式下无spsr==</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324204115.png"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326172127.png" alt="image-20210326172127109"></p>
+<p>不可以因为不符合8位位图</p>
+<h4 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h4><p>要注意是否是PC的操作</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326172355.png" alt="image-20210326172355827"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326172546.png" alt="image-20210326172546731"></p>
+<p>不行,因为有进位的要求</p>
+<h4 id="逆-反-向减法指令"><a href="#逆-反-向减法指令" class="headerlink" title="逆(反)向减法指令"></a>逆(反)向减法指令</h4><p>RSB——逆(反)向减法指令 </p>
+<p>指令格式：RSB{cond}{S} Rd，Rn，operand2 </p>
+<p>RSB指令用operand2减去寄存器Rn，结果保存到Rd中</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326173000.png" alt="image-20210326172959999"></p>
+<p>设置原因:</p>
+<p>op2不可为立即数</p>
+<h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><p>指令格式：</p>
+<p> MUL指令将Rm和Rs中的值相乘，结果的低32位保存到 Rd中。 注：Rd ≠ Rm (不能是一样的)</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210324205848.png" alt="image-20210324205848038"></p>
+<p>==且PC不可以==</p>
+<p>MUL——32位乘法指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MUL&#123;cond&#125;&#123;S&#125; Rd，Rm，Rs;Rd←Rm*Rs </span><br></pre></td></tr></table></figure>
+
+<p>MLA——32位乘加指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MLA&#123;cond&#125;&#123;S&#125; Rd，Rm，Rs，Rn; Rd←Rm*Rs+Rn</span><br></pre></td></tr></table></figure>
+
+<p>UMULL—64位无符号乘法指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UMULL&#123;cond&#125;&#123;S&#125; RdLo，RdHi，Rm，Rs； RdHi, RdLo← Rm*Rs</span><br><span class="line">低32位保存到RdLo中，高32位保存到RdHi中</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326183543.png" alt="image-20210326183543227"></p>
+<p>UMLAL—64位无符号乘加指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UMLAL&#123;cond&#125;&#123;S&#125; RdLo，RdHi，Rm，Rs；RdHi, RdLo← Rm*Rs+ RdHi, RdLo</span><br><span class="line">64位乘积与RdHi、RdLo相加</span><br></pre></td></tr></table></figure>
+
+<p>SMULL—64位有符号乘法指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SMULL&#123;cond&#125;&#123;S&#125; RdLo，RdHi，Rm，Rs； RdHi, RdLo← Rm*Rs</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326183617.png" alt="image-20210326183617263"></p>
+<p>SMLAL—64位有符号乘加指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SMLAL&#123;cond&#125;&#123;S&#125; RdLo，RdHi，Rm，Rs； RdHi, RdLo← Rm*Rs+ RdHi, RdLo</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>暂时没有很懂有符号和无符号的CPSR区别</p>
+</blockquote>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326184352.png" alt="image-20210326184352600"></p>
+<h4 id="逻辑运算指令"><a href="#逻辑运算指令" class="headerlink" title="逻辑运算指令"></a>逻辑运算指令</h4><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326184822.png" alt="image-20210326184822499"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">AND&#123;cond&#125;&#123;S&#125; Rd，Rn，operand2; OP2 AND Rn  -&gt;  Rd</span><br><span class="line"></span><br><span class="line">ORR&#123;cond&#125;&#123;S&#125; Rd，Rn，operand2; OP2 OR Rn  -&gt;  Rd</span><br><span class="line"></span><br><span class="line">EOR&#123;cond&#125;&#123;S&#125; Rd，Rn，operand2; 异或</span><br><span class="line"></span><br><span class="line">BIC&#123;cond&#125;&#123;S&#125; Rd，Rn，operand2</span><br><span class="line">;BIC指令将寄存器Rn的值与operand2的值的反码按位逻</span><br><span class="line">;辑“与”操作，结果保存到Rd中。</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="MOV"><a href="#MOV" class="headerlink" title="MOV"></a>MOV</h4><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326195216.png" alt="image-20210326195209510"></p>
+<h4 id="CMP"><a href="#CMP" class="headerlink" title="CMP"></a>CMP</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMP&#123;cond&#125; Rn，operand2;</span><br></pre></td></tr></table></figure>
+
+<p>但不存储运算结果，只根据操作的结果更新CPSR中的相应条件标志</p>
+<blockquote>
+<p>CMP指令与SUBS指令的区别</p>
+<p>是否保存结果</p>
+</blockquote>
+<p>CMN<br>CMN指令将寄存器Rn的值减去operand2的负数（即加上operand2的值)<br>CMN R0，#-1   也不可以,其-1的补码是不可以当作立即数的</p>
+<blockquote>
+<p>什么时候是补码 负数的存在形式就是补码</p>
+</blockquote>
+<h4 id="TST-按位与"><a href="#TST-按位与" class="headerlink" title="TST  按位与"></a>TST  按位<strong>与</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TST&#123;cond&#125; Rn，operand2;</span><br></pre></td></tr></table></figure>
+<p>TST R0，#0x01 ；判断R0的最低位是否为0</p>
+<p>TEQ 按位<strong>异或</strong></p>
+<h3 id="3-3-3-存储器访问指令"><a href="#3-3-3-存储器访问指令" class="headerlink" title="3.3.3 存储器访问指令"></a>3.3.3 存储器访问指令</h3><p>由于ARM处理器对外设寄存器、I/O映射空间与存储器统一编址因此，<strong>对外围设备的I/O操作也用此类指令。</strong></p>
+<ul>
+<li>LDR和STR，单寄存器加载/存储指令</li>
+<li>LDM和STM，多寄存器加载/存储指令  16个</li>
+<li>SWP，寄存器和存储器数据交换指令</li>
+</ul>
+<h4 id="3-3-3-1-单寄存器的存取指令"><a href="#3-3-3-1-单寄存器的存取指令" class="headerlink" title="3.3.3.1 单寄存器的存取指令"></a>3.3.3.1 单寄存器的存取指令</h4><p>==寄存器和存储器间传==<br>送单个字节和字的最灵活方式</p>
+<ul>
+<li>单字和无符号字节的加载/存储指令</li>
+<li>半字和有符号字节的加载/存储指令</li>
+</ul>
+<blockquote>
+<p>有符号数和无符号数的扩展<br>无符号数添 0</p>
+</blockquote>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326200739.png" alt="image-20210326200738970"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326200956.png" alt="image-20210326200956613"></p>
+<h5 id="单字和无符号字节的加载-存储指令"><a href="#单字和无符号字节的加载-存储指令" class="headerlink" title="单字和无符号字节的加载/存储指令"></a>单字和无符号字节的加载/存储指令</h5><p>T是特权模式下把他当作用户模式</p>
+<blockquote>
+<p>什么是特权模式</p>
+</blockquote>
+<p>用于存储器保护 避免越界操作,因为用户模式的限制比较多</p>
+<h5 id="半字和有符号字节的加载／存储指令"><a href="#半字和有符号字节的加载／存储指令" class="headerlink" title="半字和有符号字节的加载／存储指令"></a>半字和有符号字节的加载／存储指令</h5><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210326204716.JPG" alt="IMG_7107"></p>
+<h4 id="3-3-3-2-多寄存器的存取指令"><a href="#3-3-3-2-多寄存器的存取指令" class="headerlink" title="3.3.3.2 多寄存器的存取指令"></a>3.3.3.2 多寄存器的存取指令</h4><blockquote>
+<p>spsr作用</p>
+</blockquote>
+<p>==关于入栈出栈的加减和存储数据顺序==</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210331193109.png" alt="image-20210331193102577"></p>
+<p>入栈感觉就是出sp指针指向的单元</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210331193121.png" alt="image-20210331193121216"></p>
+<p>出栈是先减一个单元再出栈</p>
+<h3 id="3-3-4-协处理器指令"><a href="#3-3-4-协处理器指令" class="headerlink" title="3.3.4 协处理器指令"></a>3.3.4 协处理器指令</h3><h3 id="3-3-5-杂项指令"><a href="#3-3-5-杂项指令" class="headerlink" title="3.3.5 杂项指令"></a>3.3.5 杂项指令</h3><p>SWI 用户态是不可以访问某些资源的，SWI请求中断访问</p>
+<p>MRS</p>
+<p>MRS{cond} Rd，psr ； Rd &lt;- psr</p>
+<p>只有MRS指令可以将状态寄存<br>器CPSR或SPSR读出到通用寄存器中</p>
+<p>MSR</p>
+<p>MSR{cond} psr_fields，#immed/Rd</p>
+<p>==fileds必须写==，顺序无关</p>
+<p>只有MSR指令可以直接设置状态寄存 器CPSR或SPSR。 </p>
+<p>fileds</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210331201426.png" alt="image-20210331201426472"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210331202340.png" alt="image-20210331202339769"></p>
+<p>T控制位强制切换的时候会出现指令不对齐的场景</p>
+<p>BX的话指令流水会清空</p>
+<h3 id="3-3-6例题"><a href="#3-3-6例题" class="headerlink" title="3.3.6例题"></a>3.3.6例题</h3><p>看ppt</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>如果链接失效还请麻烦各位自己找寻下相关消息~ :happy:</p>
+<p>软硬中断的相关知识</p>
+<p>SWI</p>
+<p>ARM 立即寻址之立即数的形成 —— 如何判断有效立即数</p>
+<p>一个立即数寻址的题目</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/31/ARM/" data-id="ckmyawrcm001y80wgdvjg3nzs" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/31/2021%E5%9B%9B%E8%BD%B4%E9%A3%9E%E8%A1%8C%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2021 四轴飞行器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/31/%E5%B0%8F%E9%99%88%E8%87%AA%E5%B7%B1%E7%9A%84%E5%B0%8F%E6%97%A5%E8%AE%B0%20%E6%9C%89%E6%97%B6%E9%97%B4%E5%B0%B1%E8%AE%B0%E5%8F%AD/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">生活小日记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%A6%E7%B1%8D/">-书籍</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">-课程内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E5%AD%A6/">文学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E5%AD%A6/%E8%AF%BE%E5%A4%96/">课外</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/">日常生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%86%85/">课内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">课程内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%A4%96%E7%9F%A5%E8%AF%86/">课程外知识</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%A4%96%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0/">课程外知识学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9B%E8%BD%B4-%E8%AF%BE%E7%A8%8B%E5%86%85/" rel="tag">-四轴 -课程内</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F-%E5%B0%8F%E6%80%9D%E8%80%83/" rel="tag">-读后感 -小思考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tofel/" rel="tag">Tofel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" rel="tag">喜欢的语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" rel="tag">学习相关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">嵌入式操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%98%E6%8A%84/" rel="tag">摘抄</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/" rel="tag">生活感想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E7%9B%B8%E5%85%B3/" rel="tag">知识相关</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%9B%9B%E8%BD%B4-%E8%AF%BE%E7%A8%8B%E5%86%85/" style="font-size: 10px;">-四轴 -课程内</a> <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F-%E5%B0%8F%E6%80%9D%E8%80%83/" style="font-size: 10px;">-读后感 -小思考</a> <a href="/tags/Tofel/" style="font-size: 10px;">Tofel</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">喜欢的语句</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" style="font-size: 10px;">学习相关</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">学习笔记</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">嵌入式操作系统</a> <a href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 15px;">思维导图</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 10px;">摘抄</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 10px;">数据库</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/" style="font-size: 10px;">生活感想</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E7%9B%B8%E5%85%B3/" style="font-size: 15px;">知识相关</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/31/%E5%B0%8F%E9%99%88%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E5%80%99%E7%9A%84%E9%97%AE%E9%A2%98/">对新手很友好的搭建博客和使用,包含图床配置(因为我本身就是新手)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%80%9D%E8%80%83/">区块链/数字货币</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B%E5%AF%B9t%E5%92%8Cs%E9%98%B5%E5%AE%B9%E7%9A%84%E6%83%B3%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/">喜欢的语句</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/">嵌入式操作系统笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
