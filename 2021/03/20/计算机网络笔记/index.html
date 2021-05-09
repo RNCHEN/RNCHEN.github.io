@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计算机网络笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="计算机操作系统网络笔记 斜体字表示考研视频内容,与教学内容或有冲突,一切以学校ppt为准">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络笔记">
+<meta property="og:url" content="http://example.com/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机操作系统网络笔记 斜体字表示考研视频内容,与教学内容或有冲突,一切以学校ppt为准">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508224342.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508224829.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508225344.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508230322.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508230431.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508231046.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508233402.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508233616.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234001.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234149.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234407.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508235357.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508235624.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509094250.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509094428.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509113445.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509114241.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509162440.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509162842.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509163111.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509183752.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190734.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190910.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509191911.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509191845.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509222642.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509222512.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509184242.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509184656.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509185601.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509185921.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190141.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190315.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509164054.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165304.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165449.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165743.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165805.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161049.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161252.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161327.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509160913.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509151949.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152058.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152332.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152453.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152812.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152946.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153611.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153248.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153718.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509154302.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509154900.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509155004.png">
+<meta property="article:published_time" content="2021-03-20T02:24:42.393Z">
+<meta property="article:modified_time" content="2021-05-09T14:59:43.012Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508224342.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计算机网络笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2021-03-20T02:24:42.393Z" itemprop="datePublished">2021-03-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">课程内</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计算机网络笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>计算机操作系统网络笔记</p>
+<p><em>斜体字表示考研视频内容,与教学内容或有冲突,一切以学校ppt为准</em></p>
+<span id="more"></span>
+
+<p>现目前的理解，计算机通信和生活中的通信很像</p>
+<p>王道考研视频是自底向上的</p>
+<p>书是自顶向下的</p>
+<h1 id="第一章-计算机网络和因特网"><a href="#第一章-计算机网络和因特网" class="headerlink" title="第一章 计算机网络和因特网"></a>第一章 计算机网络和因特网</h1><h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><p>两台以上具有独立操作系统的计算机通过某些介质连接成的相互共享软硬件资源的集合体。</p>
+<p>计算机网络向用户提供的最重要的两大功能:</p>
+<p>连通性</p>
+<p>共享</p>
+<p>Internet: “由网络构成的网络”</p>
+<p>协议的基本要素：**语法、语义和同步<img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508224342.png" alt="image-20210508224342423"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508224829.png" alt="image-20210508224829610"></p>
+<p>第一个阶段还不是RFC文档</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508225344.png" alt="image-20210508225343985"></p>
+<h2 id="1-5分组交换网络中的延迟、丢失和吞吐量"><a href="#1-5分组交换网络中的延迟、丢失和吞吐量" class="headerlink" title="1.5分组交换网络中的延迟、丢失和吞吐量"></a>1.5<strong>分组交换网络中的延迟、丢失和吞吐量</strong></h2><h3 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h3><ul>
+<li>速率    数据传输的速率</li>
+<li>带宽   发送数据的最高速率</li>
+<li>吞吐量</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508230322.png" alt="image-20210508230322402"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508230431.png" alt="image-20210508230431644"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508231046.png" alt="image-20210508231046607"></p>
+<h3 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h3><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508233402.png" alt="image-20210508233402686"></p>
+<p><em>注意传播时延的分母</em></p>
+<p><em>传输时延是指将所有信号发出的时间,传播则是在路上的时间</em></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508233616.png" alt="image-20210508233616435"></p>
+<p><em>rtt不包括传输时延</em></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234001.png" alt="image-20210508234001636"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234149.png" alt="image-20210508234149625"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234407.png" alt="image-20210508234407501"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508235357.png" alt="image-20210508235356889"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508235624.png" alt="image-20210508235623904"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509094250.png" alt="image-20210509094243239"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509094428.png" alt="image-20210509094428221"></p>
+<ul>
+<li>应用层：所有能和用户产生网络流量的程序</li>
+<li>表示层 处理两个通信系统中交换信息的表示方式（语法和语义）<ul>
+<li>数据格式变化</li>
+<li>数据的解密和加密</li>
+<li>数据的压缩和恢复</li>
+</ul>
+</li>
+<li>会话层：向表示层实体用户进程提供<strong>建立连接</strong>，并有序的传输数据，建立同步 </li>
+</ul>
+<blockquote>
+<p>如何理解这里的传输数据和传输层的功能区别</p>
+</blockquote>
+<p>传输层：负责主机中两个进程的通信，<strong>端到端通信</strong>，单位是报文段或用户数据报</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509113445.png" alt="image-20210509113445713"></p>
+<p>复用，多个进程可同时使用运输层的服务</p>
+<p>分用，运输层把接受的消息分别交付给应用层中对应的进程</p>
+<ul>
+<li>网络层 </li>
+</ul>
+<p>把分组从源端传到目的端，为分组交换的网络上不同主机提供通信服务，基本单位是数据报</p>
+<pre><code>数据报可被分成几个分组
+</code></pre>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509114241.png" alt="image-20210509114241516"></p>
+<h1 id="第二章-应用层"><a href="#第二章-应用层" class="headerlink" title="第二章   应用层"></a>第二章   应用层</h1><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509162440.png" alt="image-20210509162440644"></p>
+<p><em>虚拟终端是指个人可以使用大型计算机</em></p>
+<p><strong>网络应用程序体系结构</strong></p>
+<ul>
+<li>客户机/服务器</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509162842.png" alt="image-20210509162842671"></p>
+<ul>
+<li>p2p</li>
+</ul>
+<p>没有总是打开的服务器</p>
+<p>任意一对主机直接相互通信</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509163111.png" alt="image-20210509163111496">对等方间歇连接并且可以改变IP地址</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509183752.png" alt="image-20210509183744837"></p>
+<h2 id="http"><a href="#http" class="headerlink" title="http"></a>http</h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190734.png" alt="image-20210509190734112"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;协议&gt;://&lt;主机&gt;:&lt;端口&gt;/&lt;lu&#x27;jing&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190910.png" alt="image-20210509190910642"></p>
+<p>浏览器可只下载文本部分，音频等可之后</p>
+<p><strong>http特点</strong>      http是无状态的，可以理解为无记忆的即HTTP服务器不维护客户先前的状态信息</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509191911.png" alt="image-20210509191911196"></p>
+<ul>
+<li>连接方式 区别在于需不需要重新建立三次握手</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509191845.png" alt="image-20210509191845718"></p>
+<p>上图右侧是非流水线</p>
+<p>报文分类–请求/响应</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509222642.png" alt="image-20210509222642781"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509222512.png" alt="image-20210509222511833"></p>
+<h2 id="2-4电子邮件"><a href="#2-4电子邮件" class="headerlink" title="2.4电子邮件"></a>2.4电子邮件</h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509184242.png" alt="image-20210509184242093"></p>
+<ul>
+<li>SMTP</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509184656.png" alt="image-20210509184656375"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509185601.png" alt="image-20210509185600773"></p>
+<p>•SMTP使用持久连接</p>
+<p>•SMTP 要求邮件消息(header &amp; body)必须是7-bit ASCII</p>
+<p>•SMTP服务器使用CRLF.CRLF 来判断邮件消息的结束</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509185921.png" alt="image-20210509185920914"></p>
+<ul>
+<li>POP3</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190141.png" alt="image-20210509190141267"></p>
+<ul>
+<li>IMAP</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190315.png" alt="image-20210509190315475"></p>
+<h2 id="2-5-DNS"><a href="#2-5-DNS" class="headerlink" title="2.5 DNS"></a>2.5 DNS</h2><p>DNS服务器提供的功能：</p>
+<p>主机名到IP地址的转换<br>主机别名<br>一个主机可以有一个规范主机名和多个主机别名<br>邮件服务器别名<br>负载分配<br>DNS实现冗余服务器：一个IP地址集合可以对应于同一个规范主机名</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509164054.png" alt="image-20210509164054091"></p>
+<p>……顶级域名不是很厉害的域名的意思……</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165304.png" alt="image-20210509165304388"></p>
+<p>本地服务器找不到就去跟服务器找</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165449.png" alt="image-20210509165448857"></p>
+<h3 id="DNS查询方式"><a href="#DNS查询方式" class="headerlink" title="DNS查询方式"></a>DNS查询方式</h3><ul>
+<li>递归</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165743.png" alt="image-20210509165743891"></p>
+<ul>
+<li>迭代</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165805.png" alt="image-20210509165805951"></p>
+<p>“我不知道它的名字，但是你可以问服务器xx”</p>
+<blockquote>
+<p>为什么可以以迭代的方式进行</p>
+<p>我对递归的理解为先知道一部分,再去补另一部分,即,每部分对应存储在不同的DNS服务器中,这样理解的话最繁忙的应该是权限域名服务器啊</p>
+</blockquote>
+<h1 id="第三章-传输层"><a href="#第三章-传输层" class="headerlink" title="第三章   传输层"></a>第三章   传输层</h1><p>有限状态机</p>
+<p>是表示有限个<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%8A%B6%E6%80%81">状态</a>以及在这些状态之间的转移和动作等行为的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B_(%E6%95%B0%E5%AD%A6)">数学计算模型</a></p>
+<h1 id="第四章-网络层"><a href="#第四章-网络层" class="headerlink" title="第四章   网络层"></a>第四章   网络层</h1><h3 id="4-4-1迪杰斯特拉算法"><a href="#4-4-1迪杰斯特拉算法" class="headerlink" title="4.4.1迪杰斯特拉算法"></a>4.4.1迪杰斯特拉算法</h3><p>ppt讲的还算清楚</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161049.png" alt="image-20210509161049785"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161252.png" alt="image-20210509161252416"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161327.png" alt="image-20210509161327484"></p>
+<h3 id="4-4-2距离向量dv算法"><a href="#4-4-2距离向量dv算法" class="headerlink" title="4.4.2距离向量dv算法"></a>4.4.2距离向量dv算法</h3><p>对新手很不友好，会有那种感觉明白了的错觉</p>
+<p>看得拳头都紧了！！！！！</p>
+<p>我来写</p>
+<p>图就用ppt图</p>
+<p>理论公式</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509160913.png" alt="image-20210509160912961"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509151949.png" alt="image-20210509151949644"></p>
+<p>初始化时，xyz只能初始化自己的那部分，就是以下的三个表</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152058.png" alt="image-20210509152058916"></p>
+<p>然后，这些线代表每个节点向邻居节点发送信息</p>
+<p>x表就变成了==先==这样，==逻辑上先这样==</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152332.png" alt="image-20210509152332583"></p>
+<p>然后因为我们要更新，更新过程如下</p>
+<p>计算x到y的最小值就分两种</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">x --&gt; y</span><br><span class="line">x --&gt; z --&gt;y</span><br></pre></td></tr></table></figure>
+<p><em>其中z–&gt;y是由z发出的节点信息得知</em></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152453.png" alt="image-20210509152453844"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152812.png" alt="image-20210509152812118"></p>
+<p>然后得出结论,完成==实际更新==</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152946.png" alt="image-20210509152946822"></p>
+<p><strong>因为x自身的信息更新了,但其他节点并不知道这个变化所以x需要重新发送自己的信息给其他的节点</strong></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153611.png" alt="image-20210509153611623"></p>
+<p>而y节点因为没有更新处于稳定状态所以不动</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153248.png" alt="image-20210509153248738"></p>
+<p>更新后还需要再计算,最后得出最终的表</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153718.png" alt="image-20210509153718120"></p>
+<p>然后我们来讨论两种不同的变化</p>
+<ul>
+<li>某链路费用减少时情况</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509154302.png" alt="image-20210509154302274"></p>
+<p>没什么问题,大家都理解</p>
+<ul>
+<li>增加时</li>
+</ul>
+<p><em>这里需要注意, DZ(X)还是原来的走y到z的路径,值为5</em></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509154900.png" alt="image-20210509154900160"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509155004.png" alt="image-20210509155004122"></p>
+<p>最后贴上特点</p>
+<p>距离向量路由算法是一种迭代的、异步的和分布式的算法。</p>
+<p>•分布式：每个节点都从其直接相连邻居接收信息，进行计算，再将计算结果分发给邻居。</p>
+<p>•迭代：计算过程一直持续到邻居之间无更多信息交换为止。</p>
+<p>•异步：不要求所有节点相互之间步伐一致地操作。</p>
+<p>•自我终结：算法能自行停止。</p>
+<h4 id="毒性逆转"><a href="#毒性逆转" class="headerlink" title="毒性逆转"></a>毒性逆转</h4><p>还没看</p>
+<ul>
+<li>LS算法与DV算法比较<ul>
+<li>消息复杂度：<ul>
+<li>LS算法：知道网络每条链路的费用，需发送O(nE)个报文；当一条链路的费用变化时，必须通知所有节点</li>
+<li>DV算法：迭代时，仅在两个直接相连邻居之间交换报文；当链路费用改变时，只有该链路相连的节点的最低费用路径发生改变时，才传播已改变的链路费用。</li>
+</ul>
+</li>
+<li>收敛速度：<ul>
+<li> LS算法：需要O(nE)个报文和O(n2)的搜寻，可能会振荡</li>
+<li> DV算法：收敛较慢。可能会遇到选路回环，或计数到无穷的问题。</li>
+</ul>
+</li>
+<li>健壮性：当一台路由器发生故障、操作错误或受到破坏时，会发生什么情况?<ul>
+<li>LS算法：路由器向其连接的一条链路广播不正确费用，路由计算基本独立（仅计算自己的转发表），有一定健壮性。</li>
+<li>DV算法：一个节点可向任意或所有目的节点发布其不正确的最低费用路径，一个节点的计算值会传递给它的邻居，并间接地传递给邻居的邻居。<strong>一个不正确的计算值会扩散到整个网络。</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/" data-id="ckntqrr7g000t3kwga0l51ser" data-title="计算机网络笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/31/%E5%B0%8F%E9%99%88%E8%87%AA%E5%B7%B1%E7%9A%84%E5%B0%8F%E6%97%A5%E8%AE%B0%20%E6%9C%89%E6%97%B6%E9%97%B4%E5%B0%B1%E8%AE%B0%E5%8F%AD/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          生活小日记
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%A6%E7%B1%8D/">-书籍</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">-课程内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E5%AD%A6/">文学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E5%AD%A6/%E8%AF%BE%E5%A4%96/">课外</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/">日常生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%86%85/">课内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">课程内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%A4%96%E7%9F%A5%E8%AF%86/">课程外知识</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%A4%96%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0/">课程外知识学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9B%E8%BD%B4-%E8%AF%BE%E7%A8%8B%E5%86%85/" rel="tag">-四轴 -课程内</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F-%E5%B0%8F%E6%80%9D%E8%80%83/" rel="tag">-读后感 -小思考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tofel/" rel="tag">Tofel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" rel="tag">喜欢的语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" rel="tag">学习相关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">嵌入式操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%98%E6%8A%84/" rel="tag">摘抄</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/" rel="tag">生活感想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E7%9B%B8%E5%85%B3/" rel="tag">知识相关</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%9B%9B%E8%BD%B4-%E8%AF%BE%E7%A8%8B%E5%86%85/" style="font-size: 10px;">-四轴 -课程内</a> <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F-%E5%B0%8F%E6%80%9D%E8%80%83/" style="font-size: 10px;">-读后感 -小思考</a> <a href="/tags/Tofel/" style="font-size: 10px;">Tofel</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">喜欢的语句</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" style="font-size: 10px;">学习相关</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">学习笔记</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">嵌入式操作系统</a> <a href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 20px;">思维导图</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 10px;">摘抄</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 10px;">数据库</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/" style="font-size: 10px;">生活感想</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E7%9B%B8%E5%85%B3/" style="font-size: 20px;">知识相关</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/31/%E5%B0%8F%E9%99%88%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E5%80%99%E7%9A%84%E9%97%AE%E9%A2%98/">对新手很友好的搭建博客和使用,包含图床配置(因为我本身就是新手)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%80%9D%E8%80%83/">区块链/数字货币</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/">喜欢的语句</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B%E5%AF%B9t%E5%92%8Cs%E9%98%B5%E5%AE%B9%E7%9A%84%E6%83%B3%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/31/%E7%9C%8B%E8%BF%99%E9%87%8C/">看这里</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
