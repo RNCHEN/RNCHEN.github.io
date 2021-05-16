@@ -1,12 +1,85 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="title: armtags:      - ARM处理器            - 学习相关categories:      - 课内 ARM课程相关笔记">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="title: armtags:      - ARM处理器            - 学习相关categories:      - 课内 ARM课程相关笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2021/03/31/ARM/index.html">
@@ -80,73 +153,214 @@
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210323195115.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/03/31/ARM/"/>
+
+
+
+
+
+  <title> | Hexo</title>
   
+
+
+
+
+
+
+
+
 <meta name="generator" content="Hexo 5.4.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
-      <div class="outer">
-        <section id="main"><article id="post-ARM" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/03/31/ARM/" class="article-date">
-  <time class="dt-published" datetime="2021-03-31T15:28:11.969Z" itemprop="datePublished">2021-03-31</time>
-</a>
+  
+  
     
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <div class="article-inner">
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/31/ARM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-31T23:28:11+08:00">
+                2021-03-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
     
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         <p>title: arm<br>tags:<br>      - ARM处理器<br>            - 学习相关<br>categories:<br>      - 课内</p>
 <p>ARM课程相关笔记</p>
@@ -654,153 +868,375 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/31/ARM/" data-id="ckntqrr8g001w3kwg48d26cho" data-title="" class="article-share-link">Share</a>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/03/31/%E5%B0%8F%E9%99%88%E8%87%AA%E5%B7%B1%E7%9A%84%E5%B0%8F%E6%97%A5%E8%AE%B0%20%E6%9C%89%E6%97%B6%E9%97%B4%E5%B0%B1%E8%AE%B0%E5%8F%AD/" rel="next" title="生活小日记">
+                <i class="fa fa-chevron-left"></i> 生活小日记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/03/31/2021%E5%9B%9B%E8%BD%B4%E9%A3%9E%E8%A1%8C%E5%99%A8/" rel="prev" title="2021 四轴飞行器">
+                2021 四轴飞行器 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
       
       
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2021/03/31/2021%E5%9B%9B%E8%BD%B4%E9%A3%9E%E8%A1%8C%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          2021 四轴飞行器
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/03/31/%E5%B0%8F%E9%99%88%E8%87%AA%E5%B7%B1%E7%9A%84%E5%B0%8F%E6%97%A5%E8%AE%B0%20%E6%9C%89%E6%97%B6%E9%97%B4%E5%B0%B1%E8%AE%B0%E5%8F%AD/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">生活小日记</div>
-    </a>
-  
-</nav>
-
-  
-</article>
+  </article>
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%A6%E7%B1%8D/">-书籍</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">-课程内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E5%AD%A6/">文学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E5%AD%A6/%E8%AF%BE%E5%A4%96/">课外</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/">日常生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%86%85/">课内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/">课程内</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%A4%96%E7%9F%A5%E8%AF%86/">课程外知识</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%A4%96%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0/">课程外知识学习</a></li></ul>
-    </div>
-  </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9B%E8%BD%B4-%E8%AF%BE%E7%A8%8B%E5%86%85/" rel="tag">-四轴 -课程内</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F-%E5%B0%8F%E6%80%9D%E8%80%83/" rel="tag">-读后感 -小思考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ARM/" rel="tag">ARM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tofel/" rel="tag">Tofel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" rel="tag">喜欢的语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" rel="tag">学习相关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">嵌入式操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%98%E6%8A%84/" rel="tag">摘抄</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/" rel="tag">生活感想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E7%9B%B8%E5%85%B3/" rel="tag">知识相关</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/%E5%9B%9B%E8%BD%B4-%E8%AF%BE%E7%A8%8B%E5%86%85/" style="font-size: 10px;">-四轴 -课程内</a> <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F-%E5%B0%8F%E6%80%9D%E8%80%83/" style="font-size: 10px;">-读后感 -小思考</a> <a href="/tags/ARM/" style="font-size: 10px;">ARM</a> <a href="/tags/Tofel/" style="font-size: 10px;">Tofel</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">喜欢的语句</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/" style="font-size: 10px;">学习相关</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">学习笔记</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">嵌入式操作系统</a> <a href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 20px;">思维导图</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 10px;">摘抄</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 10px;">数据库</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/" style="font-size: 10px;">生活感想</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E7%9B%B8%E5%85%B3/" style="font-size: 20px;">知识相关</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/05/10/ARM%20%E5%AE%9E%E9%AA%8C/">ARM实验 no write permission</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/31/%E5%B0%8F%E9%99%88%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E5%80%99%E7%9A%84%E9%97%AE%E9%A2%98/">对新手很友好的搭建博客和使用,包含图床配置(因为我本身就是新手)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/31/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%80%9D%E8%80%83/">区块链/数字货币</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/31/%E5%96%9C%E6%AC%A2%E7%9A%84%E8%AF%AD%E5%8F%A5/">喜欢的语句</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/31/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B%E5%AF%B9t%E5%92%8Cs%E9%98%B5%E5%AE%B9%E7%9A%84%E6%83%B3%E6%B3%95/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+    <div class="post-spread">
       
-      &copy; 2021 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
-</footer>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC1%E7%AB%A0-%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">第1章 嵌入式系统基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 嵌入式系统简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6"><span class="nav-number">1.1.2.</span> <span class="nav-text">硬件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E5%A4%84%E7%90%86%E5%99%A8"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">核心处理器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.2.1.1.</span> <span class="nav-text">结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="nav-number">1.1.2.1.2.</span> <span class="nav-text">指令集</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.1.3.</span> <span class="nav-text">软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">1.1.4.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.5.</span> <span class="nav-text">分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%A4%84%E7%90%86%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 嵌入式处理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 嵌入式系统开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 嵌入式操作系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0-ARM%E5%A4%84%E7%90%86%E5%99%A8%E5%8F%8A%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">第2章 ARM处理器及系统结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-ARM-%E5%A4%84%E7%90%86%E5%99%A8%E7%AE%80%E4%BB%8B"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 ARM 处理器简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-ARM-%E5%A4%84%E7%90%86%E5%99%A8%E7%B3%BB%E5%88%97"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 ARM 处理器系列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-%E7%B3%BB%E5%88%97"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1 系列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-ARM%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2 ARM体系结构的演变</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-ARM9-%E5%A4%84%E7%90%86%E5%99%A8%E5%86%85%E6%A0%B8"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 ARM9 处理器内核</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-ARM9%E7%B3%BB%E5%88%97MCU"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1 ARM9系列MCU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2 流水线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-ARM-%E5%A4%84%E7%90%86%E5%99%A8%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81-2%E7%A7%8D"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 ARM 处理器工作状态   2种</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-ARM-%E5%A4%84%E7%90%86%E5%99%A8%E8%BF%90%E8%A1%8C%E6%A8%A1%E5%BC%8F-7%E7%A7%8D"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 ARM 处理器运行模式     7种</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-ARM-%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 ARM 寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-number">2.6.1.</span> <span class="nav-text">通用寄存器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%80%BC%E5%BE%97%E8%AE%B0%E5%BF%86%E7%9A%84%E6%9C%89%E5%90%8D%E5%AD%97%E7%9A%84%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-number">2.6.2.</span> <span class="nav-text">值得记忆的有名字的寄存器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-number">2.6.3.</span> <span class="nav-text">状态寄存器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E5%BF%97%E4%BD%8D"><span class="nav-number">2.6.4.</span> <span class="nav-text">标志位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARM%E4%B8%8EThumb%E7%9A%84%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-number">2.6.5.</span> <span class="nav-text">ARM与Thumb的寄存器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thumb%E7%8A%B6%E6%80%81%E4%B8%AD%E8%AE%BF%E9%97%AE%E9%AB%98%E7%AB%AF%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-number">2.6.6.</span> <span class="nav-text">Thumb状态中访问高端寄存器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-ARM-%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 ARM 存储系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84I-O"><span class="nav-number">2.7.1.</span> <span class="nav-text">存储器映射I&#x2F;O</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-%E4%B8%AD%E6%96%AD%E5%92%8C%E5%BC%82%E5%B8%B8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%EF%BC%88%E4%B8%8D%E8%80%83%EF%BC%89"><span class="nav-number">2.8.</span> <span class="nav-text">2.8 中断和异常的基本概念（不考）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-ARM-%E7%9A%84%E5%BC%82%E5%B8%B8-7%E7%A7%8D"><span class="nav-number">2.9.</span> <span class="nav-text">2.9 ARM 的异常 7种</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-1-ARM%E7%9A%84%E4%B8%AD%E6%96%AD%EF%BC%88%E5%BC%82%E5%B8%B8%EF%BC%89%E5%90%91%E9%87%8F%E8%A1%A8"><span class="nav-number">2.9.1.</span> <span class="nav-text">2.9.1 ARM的中断（异常）向量表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-2-ARM%E5%BC%82%E5%B8%B8%E5%93%8D%E5%BA%94"><span class="nav-number">2.9.2.</span> <span class="nav-text">2.9.2 ARM异常响应</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0-%E7%95%AA%E5%A4%96-%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">第2章 番外 汇编指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC3%E7%AB%A0-ARM%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="nav-number">4.</span> <span class="nav-text">第3章 ARM指令集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81ARM%E6%8C%87%E4%BB%A4%E9%9B%86%E7%AE%80%E4%BB%8B"><span class="nav-number">4.1.</span> <span class="nav-text">1、ARM指令集简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%94%A8%E5%8A%A9%E8%AE%B0%E7%AC%A6%E8%A1%A8%E7%A4%BA%E7%9A%84ARM%E6%8C%87%E4%BB%A4"><span class="nav-number">4.1.0.1.</span> <span class="nav-text">一、用助记符表示的ARM指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%8C%87%E4%BB%A4%E7%9A%84%E6%9C%BA%E5%99%A8%E7%A0%81"><span class="nav-number">4.1.0.2.</span> <span class="nav-text">二、指令的机器码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%8C%87%E4%BB%A4%E7%9A%84%E5%8F%AF%E9%80%89%E5%90%8E%E7%BC%80"><span class="nav-number">4.1.0.3.</span> <span class="nav-text">三、指令的可选后缀</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81ARM%E6%8C%87%E4%BB%A4%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F"><span class="nav-number">4.2.</span> <span class="nav-text">2、ARM指令寻址方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-%E7%AB%8B%E5%8D%B3%E6%95%B0%E5%AF%BB%E5%9D%80-8%E4%BD%8D%E4%BD%8D%E5%9B%BE%E6%B3%95%E5%BE%88%E9%87%8D%E8%A6%81"><span class="nav-number">4.2.1.</span> <span class="nav-text">3.2.1 立即数寻址    8位位图法很重要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-%E5%AF%84%E5%AD%98%E5%99%A8%E5%AF%BB%E5%9D%80"><span class="nav-number">4.2.2.</span> <span class="nav-text">3.2.2 寄存器寻址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-3-%E5%AF%84%E5%AD%98%E5%99%A8%E7%A7%BB%E4%BD%8D%E5%AF%BB%E5%9D%80"><span class="nav-number">4.2.3.</span> <span class="nav-text">3.2.3 寄存器移位寻址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-4-%E5%AF%84%E5%AD%98%E5%99%A8%E9%97%B4%E6%8E%A5%E5%AF%BB%E5%9D%80"><span class="nav-number">4.2.4.</span> <span class="nav-text">3.2.4 寄存器间接寻址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-5-%E5%9F%BA%E5%9D%80%E5%8F%98%E5%9D%80%E5%AF%BB%E5%9D%80"><span class="nav-number">4.2.5.</span> <span class="nav-text">3.2.5 基址变址寻址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-6-%E5%A4%9A%E5%AF%84%E5%AD%98%E5%99%A8%E5%AF%BB%E5%9D%80"><span class="nav-number">4.2.6.</span> <span class="nav-text">3.2.6 多寄存器寻址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-7-%E5%A0%86%E6%A0%88%E5%AF%BB%E5%9D%80"><span class="nav-number">4.2.7.</span> <span class="nav-text">3.2.7 堆栈寻址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-8-%E7%9B%B8%E5%AF%B9%E5%AF%BB%E5%9D%80"><span class="nav-number">4.2.8.</span> <span class="nav-text">3.2.8 相对寻址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81ARM%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="nav-number">4.3.</span> <span class="nav-text">3、ARM指令集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-%E5%88%86%E6%94%AF%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.1.</span> <span class="nav-text">3.3.1 分支指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E6%8C%87%E4%BB%A4-B-%E5%8F%8A%E5%B8%A6%E8%BF%9E%E6%8E%A5%E7%9A%84%E8%B7%B3%E8%BD%AC%E6%8C%87%E4%BB%A4-BL"><span class="nav-number">4.3.1.1.</span> <span class="nav-text">跳转指令 B 及带连接的跳转指令 BL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%A6%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2%E7%9A%84%E8%B7%B3%E8%BD%AC%E6%8C%87%E4%BB%A4BX"><span class="nav-number">4.3.1.2.</span> <span class="nav-text">带状态切换的跳转指令BX</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.2.</span> <span class="nav-text">3.3.2 数据处理指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B"><span class="nav-number">4.3.2.1.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%86-%E5%8F%8D-%E5%90%91%E5%87%8F%E6%B3%95%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.2.2.</span> <span class="nav-text">逆(反)向减法指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B9%98%E6%B3%95"><span class="nav-number">4.3.2.3.</span> <span class="nav-text">乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.2.4.</span> <span class="nav-text">逻辑运算指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MOV"><span class="nav-number">4.3.2.5.</span> <span class="nav-text">MOV</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CMP"><span class="nav-number">4.3.2.6.</span> <span class="nav-text">CMP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TST-%E6%8C%89%E4%BD%8D%E4%B8%8E"><span class="nav-number">4.3.2.7.</span> <span class="nav-text">TST  按位与</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-%E5%AD%98%E5%82%A8%E5%99%A8%E8%AE%BF%E9%97%AE%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.3.</span> <span class="nav-text">3.3.3 存储器访问指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-3-1-%E5%8D%95%E5%AF%84%E5%AD%98%E5%99%A8%E7%9A%84%E5%AD%98%E5%8F%96%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.3.1.</span> <span class="nav-text">3.3.3.1 单寄存器的存取指令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8D%95%E5%AD%97%E5%92%8C%E6%97%A0%E7%AC%A6%E5%8F%B7%E5%AD%97%E8%8A%82%E7%9A%84%E5%8A%A0%E8%BD%BD-%E5%AD%98%E5%82%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.3.1.1.</span> <span class="nav-text">单字和无符号字节的加载&#x2F;存储指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8D%8A%E5%AD%97%E5%92%8C%E6%9C%89%E7%AC%A6%E5%8F%B7%E5%AD%97%E8%8A%82%E7%9A%84%E5%8A%A0%E8%BD%BD%EF%BC%8F%E5%AD%98%E5%82%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.3.1.2.</span> <span class="nav-text">半字和有符号字节的加载／存储指令</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-3-2-%E5%A4%9A%E5%AF%84%E5%AD%98%E5%99%A8%E7%9A%84%E5%AD%98%E5%8F%96%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.3.2.</span> <span class="nav-text">3.3.3.2 多寄存器的存取指令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-4-%E5%8D%8F%E5%A4%84%E7%90%86%E5%99%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.4.</span> <span class="nav-text">3.3.4 协处理器指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-5-%E6%9D%82%E9%A1%B9%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.5.</span> <span class="nav-text">3.3.5 杂项指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-6%E4%BE%8B%E9%A2%98"><span class="nav-number">4.3.6.</span> <span class="nav-text">3.3.6例题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
 
     </div>
-    <nav id="mobile-nav">
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
+    
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
 
 
 
 
 
-  </div>
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
