@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="学习笔记," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="计算机操作系统网络笔记 斜体字表示考研视频内容,与教学内容或有冲突,一切以学校ppt为准">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络笔记">
+<meta property="og:url" content="http://example.com/2021/05/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机操作系统网络笔记 斜体字表示考研视频内容,与教学内容或有冲突,一切以学校ppt为准">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508224342.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508224829.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508225344.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508230322.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508230431.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508231046.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508233402.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508233616.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234001.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234149.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234407.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508235357.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508235624.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509094250.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509094428.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509113445.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509114241.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509162440.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509162842.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509163111.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190734.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190910.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509191911.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509191845.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509233824.PNG">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509233829.PNG">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509233835.PNG">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509222642.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510084009.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510084117.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509222512.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510084707.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510085055.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510091134.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509183752.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510094123.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510101119.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509184242.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509184656.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509185601.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509185921.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190141.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190315.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509164054.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165304.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165449.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165743.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165805.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510165514.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510170048.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510165950.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510170206.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510171428.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510171508.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510172703.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210510172936.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530103531.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530102452.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530103433.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530103927.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530104341.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530105631.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530105817.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530110126.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530110405.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530141420.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530141547.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530141725.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530142725.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210530142940.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210517183126.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210517183339.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210517183358.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210517183534.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210517183958.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210517184207.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210524094858.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210524094901.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210524095544.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210524103152.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161049.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161252.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161327.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509160913.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509151949.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152058.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152332.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152453.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152812.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152946.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153611.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153248.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153718.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509154302.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509154900.png">
+<meta property="og:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210509155004.png">
+<meta property="article:published_time" content="2021-05-09T15:47:27.162Z">
+<meta property="article:modified_time" content="2021-05-30T06:31:38.548Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/chenweigen13/photo/raw/master/img/20210508224342.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/05/09/计算机网络笔记/"/>
+
+
+
+
+
+  <title>计算机网络笔记 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计算机网络笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-05-09T23:47:27+08:00">
+                2021-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BE%E7%A8%8B%E5%86%85/" itemprop="url" rel="index">
+                    <span itemprop="name">课程内</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>计算机操作系统网络笔记</p>
+<p><em>斜体字表示考研视频内容,与教学内容或有冲突,一切以学校ppt为准</em></p>
+<span id="more"></span>
+
+<p>文章部分的中英文标点符号有点混乱</p>
+<p>现目前的理解，计算机通信和生活中的通信很像</p>
+<p>王道考研视频是自底向上的</p>
+<p>书是自顶向下的</p>
+<p>0524思科网的题让我煎熬；；根本什么都不会嘛</p>
+<p>[TOC]</p>
+<h1 id="第一章-计算机网络和因特网"><a href="#第一章-计算机网络和因特网" class="headerlink" title="第一章 计算机网络和因特网"></a>第一章 计算机网络和因特网</h1><h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><p>两台以上具有独立操作系统的计算机通过某些介质连接成的相互共享软硬件资源的集合体。</p>
+<p>计算机网络向用户提供的最重要的两大功能:</p>
+<p>连通性</p>
+<p>共享</p>
+<p>Internet: “由网络构成的网络”</p>
+<p>协议的基本要素：<strong>语法、语义和同步</strong><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508224342.png" alt="image-20210508224342423"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508224829.png" alt="image-20210508224829610"></p>
+<p>第一个阶段还不是RFC文档</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508225344.png" alt="image-20210508225343985"></p>
+<h2 id="1-5分组交换网络中的延迟、丢失和吞吐量"><a href="#1-5分组交换网络中的延迟、丢失和吞吐量" class="headerlink" title="1.5分组交换网络中的延迟、丢失和吞吐量"></a>1.5<strong>分组交换网络中的延迟、丢失和吞吐量</strong></h2><h3 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h3><ul>
+<li>速率    数据传输的速率</li>
+<li>带宽   发送数据的最高速率</li>
+<li>吞吐量</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508230322.png" alt="image-20210508230322402"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508230431.png" alt="image-20210508230431644"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508231046.png" alt="image-20210508231046607"></p>
+<h3 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h3><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508233402.png" alt="image-20210508233402686"></p>
+<p><em>注意传播时延的分母</em></p>
+<p><em>传输时延是指将所有信号发出的时间,传播则是在路上的时间</em></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508233616.png" alt="image-20210508233616435"></p>
+<p><em>rtt不包括传输时延</em></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234001.png" alt="image-20210508234001636"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234149.png" alt="image-20210508234149625"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508234407.png" alt="image-20210508234407501"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508235357.png" alt="image-20210508235356889"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210508235624.png" alt="image-20210508235623904"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509094250.png" alt="image-20210509094243239"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509094428.png" alt="image-20210509094428221"></p>
+<ul>
+<li>应用层：所有能和用户产生网络流量的程序</li>
+<li>表示层 处理两个通信系统中交换信息的表示方式（语法和语义）<ul>
+<li>数据格式变化</li>
+<li>数据的解密和加密</li>
+<li>数据的压缩和恢复</li>
+</ul>
+</li>
+<li>会话层：向表示层实体用户进程提供<strong>建立连接</strong>，并有序的传输数据，建立同步 </li>
+</ul>
+<blockquote>
+<p>如何理解这里的传输数据和传输层的功能区别</p>
+</blockquote>
+<p>传输层：负责主机中两个进程的通信，<strong>端到端通信</strong>，单位是报文段或用户数据报</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509113445.png" alt="image-20210509113445713"></p>
+<p>复用，多个进程可同时使用运输层的服务</p>
+<p>分用，运输层把接受的消息分别交付给应用层中对应的进程</p>
+<ul>
+<li>网络层 </li>
+</ul>
+<p>把分组从源端传到目的端，为分组交换的网络上不同主机提供通信服务，基本单位是数据报</p>
+<pre><code>数据报可被分成几个分组
+</code></pre>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509114241.png" alt="image-20210509114241516"></p>
+<h1 id="第二章-应用层"><a href="#第二章-应用层" class="headerlink" title="第二章   应用层"></a>第二章   应用层</h1><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509162440.png" alt="image-20210509162440644"></p>
+<p><em>虚拟终端是指个人可以使用大型计算机</em></p>
+<p>对象是主机和主机之间</p>
+<p><strong>网络应用程序体系结构</strong></p>
+<ul>
+<li>客户机/服务器</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509162842.png" alt="image-20210509162842671"></p>
+<ul>
+<li>p2p</li>
+</ul>
+<p>没有总是打开的服务器</p>
+<p>任意一对主机直接相互通信</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509163111.png" alt="image-20210509163111496">对等方间歇连接并且可以改变IP地址</p>
+<h2 id="2-2-http"><a href="#2-2-http" class="headerlink" title="2.2 http"></a>2.2 http</h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190734.png" alt="image-20210509190734112"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;协议&gt;://&lt;主机&gt;:&lt;端口&gt;/<span class="tag">&lt;<span class="name">lu-jing</span>&gt;</span>（哼哼这是中文拼音没想到吧）</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190910.png" alt="image-20210509190910642"></p>
+<p>浏览器可只下载文本部分，音频等可之后</p>
+<p><strong>http特点</strong>      http是无状态的，可以理解为无记忆的即HTTP服务器不维护客户先前的状态信息</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509191911.png" alt="image-20210509191911196"></p>
+<ul>
+<li>连接方式 区别在于需不需要重新建立三次握手</li>
+</ul>
+<blockquote>
+<p>什么是TCP连接</p>
+</blockquote>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509191845.png" alt="image-20210509191845718"></p>
+<p>上图右侧是非流水线</p>
+<p>过程</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509233824.PNG" alt="1"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509233829.PNG" alt="2"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509233835.PNG" alt="3"></p>
+<p>报文分类–请求/响应</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509222642.png" alt="image-20210509222642781"></p>
+<p>ASCII文本 (易于人读格式)下图为请求报文</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510084009.png" alt="image-20210510084002732"></p>
+<p>==注意是URI不是URL== Uniform Resource Identifiers 或统一资源标识符</p>
+<p>下图为方法的类型</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510084117.png" alt="image-20210510084117026"></p>
+<ul>
+<li>GET +uri</li>
+<li>POST 把客户端传送给服务器端</li>
+<li>HEAD</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509222512.png" alt="image-20210509222511833"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510084707.png" alt="image-20210510084707437"></p>
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>cookie和session见如下链接</p>
+<p>简单理解:cookie在本地,session在服务器上</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/chen13333336677/article/details/100939030?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162060877616780255224834%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162060877616780255224834&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-100939030.first_rank_v2_pc_rank_v29&amp;utm_term=session%E5%92%8Ccookie%E7%9A%84%E5%8C%BA%E5%88%AB">https://blog.csdn.net/chen13333336677/article/details/100939030?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162060877616780255224834%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162060877616780255224834&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-100939030.first_rank_v2_pc_rank_v29&amp;utm_term=session%E5%92%8Ccookie%E7%9A%84%E5%8C%BA%E5%88%AB</a></p>
+<p> Cookie 的主要目的就是为了弥补 HTTP 的无状态特性。下图为cookie的过程</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510085055.png" alt="image-20210510085055313"></p>
+<h3 id="web缓存"><a href="#web缓存" class="headerlink" title="web缓存"></a><strong>web缓存</strong></h3><p>见ppt</p>
+<p><em>感觉有点像高速缓存</em></p>
+<p>目标:在不访问服务器的前提下满足客户端的HTTP请求。</p>
+<p>优点</p>
+<ul>
+<li>减少对客户机请求的响应时间</li>
+<li>减少内部网络与接入链路上的通信量</li>
+<li>能从整体上大大降低因特网上的Web流量</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510091134.png" alt="image-20210510091134494"></p>
+<blockquote>
+<p>排对时延得再去看</p>
+</blockquote>
+<p><strong>条件get</strong></p>
+<p>本地缓存虽然有,但是是最新的么,不一定,所以需要确认缓存器的对象是否为最新的</p>
+<p><strong>目的</strong>:证实缓存器中的对象是否为最新</p>
+<h2 id="2-3-FTP"><a href="#2-3-FTP" class="headerlink" title="2.3 FTP"></a>2.3 FTP</h2><blockquote>
+<p>ftp和http区别</p>
+</blockquote>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509183752.png" alt="image-20210509183744837"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510094123.png" alt="image-20210510093943538"></p>
+<p><em>服务器创建第2个TCP与客户的数据连接来传输下一个文件.所以多个文件传输会很慢</em></p>
+<ul>
+<li>控制连接: ==带外发送控制信息==</li>
+</ul>
+<p>==控制信息与数据信息不同通道==</p>
+<p> （对比HTTP—带内）</p>
+<p>在http中控制信息在首部</p>
+<ul>
+<li>FTP 服务器要维护用户状态信息: 当前目录, 先前的身份认证</li>
+</ul>
+<p> （对比HTTP—无状态）</p>
+<p><strong>连接数据模式</strong></p>
+<p>原因,内部网禁止外部服务器进入且内部网络想要链接外面</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510101119.png" alt="image-20210510101118943"></p>
+<p>主动模式是服务器找客户端</p>
+<p>被动模式是客户端找服务器</p>
+<h2 id="2-4电子邮件"><a href="#2-4电子邮件" class="headerlink" title="2.4电子邮件"></a>2.4电子邮件</h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509184242.png" alt="image-20210509184242093"></p>
+<ul>
+<li>SMTP</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509184656.png" alt="image-20210509184656375"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509185601.png" alt="image-20210509185600773"></p>
+<p>•SMTP使用持久连接</p>
+<p>•SMTP 要求邮件消息(header &amp; body)必须是7-bit ASCII</p>
+<p>•SMTP服务器使用CRLF.CRLF 来判断邮件消息的结束</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509185921.png" alt="image-20210509185920914"></p>
+<ul>
+<li>POP3</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190141.png" alt="image-20210509190141267"></p>
+<ul>
+<li>IMAP</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509190315.png" alt="image-20210509190315475"></p>
+<h2 id="2-5-DNS"><a href="#2-5-DNS" class="headerlink" title="2.5 DNS"></a>2.5 DNS</h2><p>DNS服务器提供的功能：</p>
+<p>主机名到IP地址的转换<br>主机别名<br>一个主机可以有一个规范主机名和多个主机别名<br>邮件服务器别名<br>负载分配<br>DNS实现冗余服务器：一个IP地址集合可以对应于同一个规范主机名</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509164054.png" alt="image-20210509164054091"></p>
+<p>……顶级域名不是很厉害的域名的意思……</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165304.png" alt="image-20210509165304388"></p>
+<p>本地服务器找不到就去跟服务器找</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165449.png" alt="image-20210509165448857"></p>
+<h3 id="DNS查询方式"><a href="#DNS查询方式" class="headerlink" title="DNS查询方式"></a>DNS查询方式</h3><ul>
+<li>递归</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165743.png" alt="image-20210509165743891"></p>
+<ul>
+<li>迭代</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509165805.png" alt="image-20210509165805951"></p>
+<p>“我不知道它的名字，但是你可以问服务器xx”</p>
+<blockquote>
+<p>为什么可以以迭代的方式进行</p>
+<p>我对递归的理解为先知道一部分,再去补另一部分,即,每部分对应存储在不同的DNS服务器中,这样理解的话最繁忙的应该是权限域名服务器啊</p>
+</blockquote>
+<p>•一旦名字服务器获得DNS映射, 它将缓存该映射到局部内存</p>
+<p>•服务器在一定时间后将丢弃缓存的信息</p>
+<p>•本地DNS服务器可以缓存TLD服务器的IP地址</p>
+<p>•因此根DNS服务器不会被经常访问</p>
+<p>减少根服务器的访问次数,提高效率</p>
+<p>然后我们来看DNS记录的格式</p>
+<p>TTL time to leave</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">RR</span><br><span class="line"></span><br><span class="line">(name, value, type, TTL)</span><br><span class="line">IF Type&#x3D;A（Address）</span><br><span class="line">   name &#x3D; 主机名</span><br><span class="line">   value &#x3D; IP地址</span><br><span class="line">IF Type&#x3D;CNAME（canonical）</span><br><span class="line">	name &#x3D; 主机别名</span><br><span class="line"> 	www.ibm.com的真名为</span><br><span class="line">	servereast.backup2.ibm.com </span><br><span class="line">	value &#x3D; 真实的规范主机名</span><br><span class="line">IF Type&#x3D;NS（ name server ）</span><br><span class="line">	name &#x3D; 域名（如foo.com） </span><br><span class="line">	value &#x3D; 该域权威名字服务器的主机名</span><br><span class="line">IF Type&#x3D;MX（mail exchange）</span><br><span class="line">	name &#x3D;邮件服务器的主机别名</span><br><span class="line">	value &#x3D;邮件服务器的真实规范主机名</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>DNS 协议–不是重点暂时先不看</p>
+<h2 id="2-7-CDN"><a href="#2-7-CDN" class="headerlink" title="2.7 CDN"></a>2.7 CDN</h2><p>内容分发网络(Content distribution networks, CDN)</p>
+<h1 id="第三章-传输层"><a href="#第三章-传输层" class="headerlink" title="第三章   传输层"></a>第三章   传输层</h1><h2 id="3-1-传输层服务"><a href="#3-1-传输层服务" class="headerlink" title="3.1 传输层服务"></a>3.1 传输层服务</h2><ul>
+<li><p>在两个不同的主机上运行的应用程序之间提供逻辑通信机制</p>
+</li>
+<li><p>即进程之间的逻辑通信 </p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510165514.png" alt="image-20210510165514133"></p>
+<p>传输层协议运行在端系统 </p>
+<p>发送方: 将应用程序报文分成报文段传递给==网络层==<br>接受方: 将报文段重新组装成报文传递到==应用层==<br>传输层可以为应用提供多种协议<br>因特网: TCP 和 UDP</p>
+</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510170048.png" alt="image-20210510165217593"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510165950.png" alt="image-20210510165950333"></p>
+<h2 id="3-2-多路复用和多路分解"><a href="#3-2-多路复用和多路分解" class="headerlink" title="3.2 多路复用和多路分解"></a>3.2 多路复用和多路分解</h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510170206.png" alt="image-20210510170206148"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510171428.png" alt="image-20210510171428282"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510171508.png" alt="image-20210510171508261"></p>
+<h2 id="3-3-无连接传输-UDP、"><a href="#3-3-无连接传输-UDP、" class="headerlink" title="3.3 无连接传输: UDP、"></a>3.3 无连接传输: UDP、</h2><p>IP数据报+分用复用+差错检测~UDP</p>
+<p>特点：</p>
+<ul>
+<li>无连接</li>
+<li>尽力</li>
+<li>面向报文的     ==保留应用层报文== </li>
+<li>==无拥塞控制==，适合实时应用</li>
+<li>首部开销小，8字节，TCP 20字节</li>
+</ul>
+<p><strong>DUP格式</strong></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510172703.png" alt="image-20210510172703282"></p>
+<p>分用时找不到对应的目的端口号就丢弃报文，并给发送方发送ICMP消息</p>
+<p><strong>校验时</strong></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210510172936.png" alt="image-20210510172936512"></p>
+<h2 id="3-4-可靠数据传输原理"><a href="#3-4-可靠数据传输原理" class="headerlink" title="3.4 可靠数据传输原理"></a>3.4 可靠数据传输原理</h2><p>信道的不可靠特性决定了可靠数据传输协议(rdt)的复杂性</p>
+<p>解决方法</p>
+<p>​    逐步开发发送方和接收方的可靠数据传输协议 (rdt)</p>
+<p>​    仅考虑<strong>单向数据</strong>传输</p>
+<p>​    但控制信息将在<strong>两个方向流动</strong>！</p>
+<p>​    使用有限状态机 (FSM)来定义发送方和接收方</p>
+<h2 id="3-5-面向连接传输-TCP"><a href="#3-5-面向连接传输-TCP" class="headerlink" title="3.5 面向连接传输: TCP"></a>3.5 面向连接传输: TCP</h2><h2 id="3-6-拥塞控制原理"><a href="#3-6-拥塞控制原理" class="headerlink" title="3.6 拥塞控制原理"></a>3.6 拥塞控制原理</h2><h2 id="3-7-TCP-拥塞控制"><a href="#3-7-TCP-拥塞控制" class="headerlink" title="3.7 TCP 拥塞控制"></a>3.7 TCP 拥塞控制</h2><p>有限状态机</p>
+<p>是表示有限个<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%8A%B6%E6%80%81">状态</a>以及在这些状态之间的转移和动作等行为的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B_(%E6%95%B0%E5%AD%A6)">数学计算模型</a></p>
+<h1 id="第四章-网络层"><a href="#第四章-网络层" class="headerlink" title="第四章   网络层"></a>第四章   网络层</h1><h2 id="4-1-引言"><a href="#4-1-引言" class="headerlink" title="4.1 引言"></a>4.1 <strong>引言</strong></h2><p>功能：</p>
+<ul>
+<li>转发(forwarding): 将分组从路由器的输入端口转移到正确的路由器输出端口</li>
+<li>路由(routing): 确定分组从发送方传输到接收方(目的主机)所经过的路径(或路由)</li>
+</ul>
+<p>确定路径如何并完成路径</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530103531.png" alt="image-20210530103531096"></p>
+<p>暂时不是很明白上面这张ppt的意思</p>
+<h2 id="4-2-虚电路和数据报网络"><a href="#4-2-虚电路和数据报网络" class="headerlink" title="4.2 虚电路和数据报网络"></a>4.2 <strong>虚电路和数据报网络</strong></h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530102452.png" alt="image-20210530102445453"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530103433.png" alt="image-20210530103433021"></p>
+<h2 id="4-3-路由器的结构"><a href="#4-3-路由器的结构" class="headerlink" title="4.3 路由器的结构"></a>4.3 <strong>路由器的结构</strong></h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530103927.png" alt="image-20210530103927740"></p>
+<p>四个部分嗷—&gt;还有下面的routing processor</p>
+<h3 id="输入端口"><a href="#输入端口" class="headerlink" title="输入端口"></a>输入端口</h3><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530104341.png" alt="image-20210530104341085"></p>
+<blockquote>
+<p>1.网络层：路由器、防火墙<br>2.数据链路层：网卡、网桥、交换机<br>3.物理层：中继器、集线器</p>
+</blockquote>
+<p>==那为什么说路由器的数据链路层功能呢==</p>
+<p>这里就只着重介绍第三个模块</p>
+<ul>
+<li>查找与转发模块</li>
+</ul>
+<p>确定将一个到达的分组通过交换结构<strong>转发给哪个输出端口</strong>。 通过查找转发表实现，这里的转发表是存储在输入端口的内存中。</p>
+<p>其中的一种方式是分布式交换</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530105631.png" alt="image-20210530105631382"></p>
+<p>三种交换结构</p>
+<p>作用是:将分组从输入端口缓存交换（转发）到恰当的输出端口缓存中</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530105817.png" alt="image-20210530105817849"></p>
+<p>第一代路由器是内存式, 现代已经是总线式了</p>
+<ul>
+<li>内存式</li>
+</ul>
+<p>早期用计算机作为路由器时采用的结构(第一代)<br>输入端口与输出端口之间的<strong>交换由CPU(选路处理器)控制完成</strong>；<br>输入端口与输出端口类似I/O设备：<br>       当分组到达输入端口时，通过中断向选路处理器发出信号，将分组拷贝到处理器内存中；<br>       选路处理器根据分组中的目的地址查表找出适当的输出端口，将该分组拷贝到输出端口的缓存中。</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530110126.png" alt="image-20210530110126818"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530110405.png" alt="image-20210530110405452"></p>
+<p>我觉得不能按ppt的理解,以下网上的说法我更能理解</p>
+<blockquote>
+<p>不能同时转发两个分组，即使它们有不同的端口号，因为经过共享系统总线一次仅能执行一个内存读/写。</p>
+</blockquote>
+<ul>
+<li>经总线交换式</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530141420.png" alt="image-20210530141420569"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530141547.png" alt="image-20210530141547225"></p>
+<h3 id="输出端口"><a href="#输出端口" class="headerlink" title="输出端口"></a>输出端口</h3><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530141725.png" alt="image-20210530141725631"></p>
+<p>这个延时就是排对时延</p>
+<ul>
+<li>线头阻塞（Head-of-the-Line (HOL) blocking）: 在队列前面的被阻塞的数据报会阻止队列中的其他数据报被转发。</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530142725.png" alt="image-20210530142724981"></p>
+<h2 id="4-4-IP协议-重点"><a href="#4-4-IP协议-重点" class="headerlink" title="4.4 ==IP协议(重点)=="></a>4.4 ==IP协议(重点)==</h2><p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210530142940.png" alt="image-20210530142940376"></p>
+<p>IP数据报分片和重组：</p>
+<p>A类地址的第一位为“0”，B类地址的前两位为“10”，C类地址的前三位为“110”，D类地址的前四位为“1110”，E类地址的前五位为“11110”。其中，A类、B类与C类地址为基本的IP地址。 </p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210517183126.png" alt="image-20210517183119236"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210517183339.png" alt="image-20210517183339193"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210517183358.png" alt="image-20210517183358631"></p>
+<h3 id="划分子网"><a href="#划分子网" class="headerlink" title="划分子网"></a>划分子网</h3><p>为什么要</p>
+<blockquote>
+<p>利用IP地址的网络段，我们可以唯一的标识一个物理网络。现在考虑我们要将一些网络（Network）连接到Internet上来，对于一个Network，无论它拥有的主机数多小，它至少都需要一个C类网络地址，如果它拥有超过255个的主机（或者有拓展到超过255个主机数的可能），那就需要一个B类网络，但对于我们的IPv4地址，它的地址数是有限的（大约40多亿个），如果是有300个主机的小网络，却不得不使用B类网络（一个B类网络有65534个主机段），那就浪费了6万多个地址，这使得地址的消耗变得非常快（事实上，早在2011年IPv4地址就分配完了……）</p>
+</blockquote>
+<p>感觉这一段说的还是比较仔细了</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210517183534.png" alt="image-20210517183534541"></p>
+<p>由此可见<em>子网号字段长度是可变的，因此，为了确定子网地址，IP协议提供了子网掩码的概念</em></p>
+<p>其中的1对应于IP地址中的网络号和子网号，而子网掩码中的0对应于主机号。</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210517183958.png" alt="image-20210517183958841"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210517184207.png" alt="image-20210517184207239"></p>
+<p>==新主机号是后9位!!!!!!!!==</p>
+<p>子网划分相关链接</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/dyyay521/article/details/94381876?utm_source=app&amp;app_version=4.5.8">https://blog.csdn.net/dyyay521/article/details/94381876?utm_source=app&amp;app_version=4.5.8</a></p>
+<h3 id="子网掩码分组转发"><a href="#子网掩码分组转发" class="headerlink" title="子网掩码分组转发"></a>子网掩码分组转发</h3><p>不划分子网时，路由表只有<strong>两项</strong>：目的网络地址和下一跳地址</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210524094858.png" alt="image-20210524094840802"></p>
+<p>使用子网划分后，路由表中包括<strong>三项</strong>：目的网络地址、<strong>子网掩码</strong>和下一跳地址</p>
+<p>子网掩码与目的<strong>网络地址</strong>&amp;后判断是否在同一网段</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210524094901.png" alt="image-20210524094854100"></p>
+<h3 id="CIDR"><a href="#CIDR" class="headerlink" title="CIDR"></a>CIDR</h3><p>传统IP地址分类方式分配IP被CIDR（无分类域间路由）技术取代</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210524095544.png" alt="image-20210524095544891"></p>
+<p>CIDR同时也解决了子网主机段不能全为0或者1的问题，因为128.112.128.0/21与128.112.128.0/24是两个不同的IP，不会再有重叠的问题。</p>
+<p>以下连接是概念讲解</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/saasanken/article/details/80371058?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162182155516780265445964%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162182155516780265445964&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-80371058.first_rank_v2_pc_rank_v29&amp;utm_term=CIDR&amp;spm=1018.2226.3001.4187">https://blog.csdn.net/saasanken/article/details/80371058?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162182155516780265445964%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162182155516780265445964&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-80371058.first_rank_v2_pc_rank_v29&amp;utm_term=CIDR&amp;spm=1018.2226.3001.4187</a></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210524103152.png" alt="image-20210524103152478"></p>
+<p>（1）</p>
+<p>以最多台数的部门（60台）为准，需要的最接近数为2^6=64，故要从最后个字节借8-6=2位，</p>
+<p>子网分别为 202.1.1.0, 202.1.1.64, 202.1.1.128, 202.1.1.192，在这4个其中任选3个即可。掩码均为254.254.254.192。</p>
+<p>（2）</p>
+<p>若以最多台数的部门（120台）为准，仅能分两个子网，无法满足。故应采用CIDR法：</p>
+<p>==首先以最小需求台数部门为准（60台）==，此时主机号位数需剩下2个以满足120台的要求（但这两个子网要要6位（因为60=&lt;2^6-2），则子网号位数为8-6=2位，然后将子网划分出来。此时和（1）一样；</p>
+<p>接下来，部门2、3可以直接在4个子网中任选两个，<strong>部门1选连续，以便用CIDR法合并之</strong>，做超网）。比如202.1.1.128、202.1.1.192分别给部门2、3，<strong>部门1用202.1.1.0、202.1.1.64</strong>。</p>
+<p>（3）最后将各部门IP段用CIDR超网形式描述，以便对外发布：</p>
+<p>部门1：202.1.1.0/25; (注意含义：表示前25位是网络号，且最后一个字节最高位为0，后面7位是主机号)</p>
+<p>部门2：202.1.1.128/26; (最后一个字节最高两位为10，后面6位是主机号)</p>
+<p>部门3：202.1.1.192/26; (最后一个字节最高两位为11，后面6位是主机号)</p>
+<p>以下link是另一个题目讲解</p>
+<p> <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37611061/article/details/89368309?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">https://blog.csdn.net/qq_37611061/article/details/89368309?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
+<p>==什么时候可以全0    全1==</p>
+<h3 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h3><h2 id="各类地址区别"><a href="#各类地址区别" class="headerlink" title="各类地址区别"></a>各类地址区别</h2><p>主机地址，网络地址，广播地址 ，IP地址， MAC地址，私有地址</p>
+<h2 id="网关（为什么ppt关键词没有呢）"><a href="#网关（为什么ppt关键词没有呢）" class="headerlink" title="网关（为什么ppt关键词没有呢）"></a>网关（为什么ppt关键词没有呢）</h2><p>IP地址，子网掩码、默认网关，DNS服务器之间的联系与区别<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/hexf9632/article/details/93469788?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162233999316780366535943%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162233999316780366535943&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-93469788.first_rank_v2_pc_rank_v29&amp;utm_term=%E7%BD%91%E5%85%B3&amp;spm=1018.2226.3001.4187">https://blog.csdn.net/hexf9632/article/details/93469788?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162233999316780366535943%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162233999316780366535943&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-93469788.first_rank_v2_pc_rank_v29&amp;utm_term=%E7%BD%91%E5%85%B3&amp;spm=1018.2226.3001.4187</a></p>
+<p><em>但是对网关的讲解不是很深入</em></p>
+<p>【IT互联网系列】什么是网关？网关的作用是什么？看完不懂，你捶我<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yy339452689/article/details/103913617?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162233999316780366535943%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162233999316780366535943&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-2-103913617.first_rank_v2_pc_rank_v29&amp;utm_term=%E7%BD%91%E5%85%B3&amp;spm=1018.2226.3001.4187">https://blog.csdn.net/yy339452689/article/details/103913617?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162233999316780366535943%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162233999316780366535943&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-2-103913617.first_rank_v2_pc_rank_v29&amp;utm_term=%E7%BD%91%E5%85%B3&amp;spm=1018.2226.3001.4187</a></p>
+<p>从一个<strong>网络向另一个网络</strong>发送信息，也必须经过一道“关口”，这道关口就是网关，这里的网络就是指网络号<br>如果网络A中的主机发现数据包的目的主机不在本地网络中，就把数据包转发给它自己的网关，再由网关转发给网络B的网关，网络B的网关再转发给网络B的某个主机</p>
+<p><em>这篇应该是可以能理解了，那么路由器和网关的关系又是什么呢</em></p>
+<h2 id="4-5-路由算法-重点、难点"><a href="#4-5-路由算法-重点、难点" class="headerlink" title="4.5 路由算法(重点、难点)"></a>4.5 路由算法(重点、难点)</h2><h3 id="4-5-1迪杰斯特拉算法"><a href="#4-5-1迪杰斯特拉算法" class="headerlink" title="4.5.1迪杰斯特拉算法"></a>4.5.1迪杰斯特拉算法</h3><p>ppt讲的还算清楚</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161049.png" alt="image-20210509161049785"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161252.png" alt="image-20210509161252416"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509161327.png" alt="image-20210509161327484"></p>
+<h3 id="4-5-2距离向量dv算法"><a href="#4-5-2距离向量dv算法" class="headerlink" title="4.5.2距离向量dv算法"></a>4.5.2距离向量dv算法</h3><p>对新手很不友好，会有那种感觉明白了的错觉</p>
+<p>看得拳头都紧了！！！！！</p>
+<p>我来写</p>
+<p>图就用ppt图</p>
+<p>理论公式</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509160913.png" alt="image-20210509160912961"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509151949.png" alt="image-20210509151949644"></p>
+<p>初始化时，xyz只能初始化自己的那部分，就是以下的三个表</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152058.png" alt="image-20210509152058916"></p>
+<p>然后，这些线代表每个节点向邻居节点发送信息</p>
+<p>x表就变成了==先==这样，==逻辑上先这样==</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152332.png" alt="image-20210509152332583"></p>
+<p>然后因为我们要更新，更新过程如下</p>
+<p>计算x到y的最小值就分两种</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">x --&gt; y</span><br><span class="line">x --&gt; z --&gt;y</span><br></pre></td></tr></table></figure>
+<p><em>其中z–&gt;y是由z发出的节点信息得知</em></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152453.png" alt="image-20210509152453844"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152812.png" alt="image-20210509152812118"></p>
+<p>然后得出结论,完成==实际更新==</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509152946.png" alt="image-20210509152946822"></p>
+<p><strong>因为x自身的信息更新了,但其他节点并不知道这个变化所以x需要重新发送自己的信息给其他的节点</strong></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153611.png" alt="image-20210509153611623"></p>
+<p>而y节点因为没有更新处于稳定状态所以不动</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153248.png" alt="image-20210509153248738"></p>
+<p>更新后还需要再计算,最后得出最终的表</p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509153718.png" alt="image-20210509153718120"></p>
+<p>然后我们来讨论两种不同的变化</p>
+<ul>
+<li>某链路费用减少时情况</li>
+</ul>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509154302.png" alt="image-20210509154302274"></p>
+<p>没什么问题,大家都理解</p>
+<ul>
+<li>增加时</li>
+</ul>
+<p><em>这里需要注意, DZ(X)还是原来的走y到z的路径,值为5</em></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509154900.png" alt="image-20210509154900160"></p>
+<p><img src="https://gitee.com/chenweigen13/photo/raw/master/img/20210509155004.png" alt="image-20210509155004122"></p>
+<p>最后贴上特点</p>
+<p>距离向量路由算法是一种迭代的、异步的和分布式的算法。</p>
+<p>•分布式：每个节点都从其直接相连邻居接收信息，进行计算，再将计算结果分发给邻居。</p>
+<p>•迭代：计算过程一直持续到邻居之间无更多信息交换为止。</p>
+<p>•异步：不要求所有节点相互之间步伐一致地操作。</p>
+<p>•自我终结：算法能自行停止。</p>
+<h4 id="毒性逆转"><a href="#毒性逆转" class="headerlink" title="毒性逆转"></a>毒性逆转</h4><p>还没看</p>
+<ul>
+<li>LS算法与DV算法比较<ul>
+<li>消息复杂度：<ul>
+<li>LS算法：知道网络每条链路的费用，需发送O(nE)个报文；当一条链路的费用变化时，必须通知所有节点</li>
+<li>DV算法：迭代时，仅在两个直接相连邻居之间交换报文；当链路费用改变时，只有该链路相连的节点的最低费用路径发生改变时，才传播已改变的链路费用。</li>
+</ul>
+</li>
+<li>收敛速度：<ul>
+<li> LS算法：需要O(nE)个报文和O(n2)的搜寻，可能会振荡</li>
+<li> DV算法：收敛较慢。可能会遇到选路回环，或计数到无穷的问题。</li>
+</ul>
+</li>
+<li>健壮性：当一台路由器发生故障、操作错误或受到破坏时，会发生什么情况?<ul>
+<li>LS算法：路由器向其连接的一条链路广播不正确费用，路由计算基本独立（仅计算自己的转发表），有一定健壮性。</li>
+<li>DV算法：一个节点可向任意或所有目的节点发布其不正确的最低费用路径，一个节点的计算值会传递给它的邻居，并间接地传递给邻居的邻居。<strong>一个不正确的计算值会扩散到整个网络。</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-6-因特网中的路由协议"><a href="#4-6-因特网中的路由协议" class="headerlink" title="4.6 因特网中的路由协议"></a>4.6 因特网中的路由协议</h2><h2 id="4-7-SDN"><a href="#4-7-SDN" class="headerlink" title="4.7 SDN"></a>4.7 SDN</h2><h1 id="第五章-数据链路层"><a href="#第五章-数据链路层" class="headerlink" title="第五章 数据链路层"></a>第五章 数据链路层</h1>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/03/31/%E5%B0%8F%E9%99%88%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E5%80%99%E7%9A%84%E9%97%AE%E9%A2%98/" rel="next" title="对新手很友好的搭建博客和使用,包含图床配置(因为我本身就是新手)">
+                <i class="fa fa-chevron-left"></i> 对新手很友好的搭建博客和使用,包含图床配置(因为我本身就是新手)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/05/10/ARM%20%E5%AE%9E%E9%AA%8C/" rel="prev" title="ARM实验 no write permission">
+                ARM实验 no write permission <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%92%8C%E5%9B%A0%E7%89%B9%E7%BD%91"><span class="nav-number">1.</span> <span class="nav-text">第一章 计算机网络和因特网</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="nav-number">1.1.</span> <span class="nav-text">计算机网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%9A%84%E5%BB%B6%E8%BF%9F%E3%80%81%E4%B8%A2%E5%A4%B1%E5%92%8C%E5%90%9E%E5%90%90%E9%87%8F"><span class="nav-number">1.2.</span> <span class="nav-text">1.5分组交换网络中的延迟、丢失和吞吐量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%9E%E5%90%90%E9%87%8F"><span class="nav-number">1.2.1.</span> <span class="nav-text">吞吐量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E5%BB%B6"><span class="nav-number">1.2.2.</span> <span class="nav-text">时延</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BA%94%E7%94%A8%E5%B1%82"><span class="nav-number">2.</span> <span class="nav-text">第二章   应用层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-http"><span class="nav-number">2.1.</span> <span class="nav-text">2.2 http</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie"><span class="nav-number">2.1.1.</span> <span class="nav-text">cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web%E7%BC%93%E5%AD%98"><span class="nav-number">2.1.2.</span> <span class="nav-text">web缓存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-FTP"><span class="nav-number">2.2.</span> <span class="nav-text">2.3 FTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">2.4电子邮件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-DNS"><span class="nav-number">2.4.</span> <span class="nav-text">2.5 DNS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS%E6%9F%A5%E8%AF%A2%E6%96%B9%E5%BC%8F"><span class="nav-number">2.4.1.</span> <span class="nav-text">DNS查询方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-CDN"><span class="nav-number">2.5.</span> <span class="nav-text">2.7 CDN</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%BC%A0%E8%BE%93%E5%B1%82"><span class="nav-number">3.</span> <span class="nav-text">第三章   传输层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E4%BC%A0%E8%BE%93%E5%B1%82%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 传输层服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E5%92%8C%E5%A4%9A%E8%B7%AF%E5%88%86%E8%A7%A3"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 多路复用和多路分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E6%97%A0%E8%BF%9E%E6%8E%A5%E4%BC%A0%E8%BE%93-UDP%E3%80%81"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 无连接传输: UDP、</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E5%8F%AF%E9%9D%A0%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%8E%9F%E7%90%86"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 可靠数据传输原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E9%9D%A2%E5%90%91%E8%BF%9E%E6%8E%A5%E4%BC%A0%E8%BE%93-TCP"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 面向连接传输: TCP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86"><span class="nav-number">3.6.</span> <span class="nav-text">3.6 拥塞控制原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-7-TCP-%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6"><span class="nav-number">3.7.</span> <span class="nav-text">3.7 TCP 拥塞控制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="nav-number">4.</span> <span class="nav-text">第四章   网络层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E5%BC%95%E8%A8%80"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E8%99%9A%E7%94%B5%E8%B7%AF%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8A%A5%E7%BD%91%E7%BB%9C"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 虚电路和数据报网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 路由器的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E7%AB%AF%E5%8F%A3"><span class="nav-number">4.3.1.</span> <span class="nav-text">输入端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E7%AB%AF%E5%8F%A3"><span class="nav-number">4.3.2.</span> <span class="nav-text">输出端口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-IP%E5%8D%8F%E8%AE%AE-%E9%87%8D%E7%82%B9"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 &#x3D;&#x3D;IP协议(重点)&#x3D;&#x3D;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%92%E5%88%86%E5%AD%90%E7%BD%91"><span class="nav-number">4.4.1.</span> <span class="nav-text">划分子网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E5%88%86%E7%BB%84%E8%BD%AC%E5%8F%91"><span class="nav-number">4.4.2.</span> <span class="nav-text">子网掩码分组转发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CIDR"><span class="nav-number">4.4.3.</span> <span class="nav-text">CIDR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DHCP"><span class="nav-number">4.4.4.</span> <span class="nav-text">DHCP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%B1%BB%E5%9C%B0%E5%9D%80%E5%8C%BA%E5%88%AB"><span class="nav-number">4.5.</span> <span class="nav-text">各类地址区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E5%85%B3%EF%BC%88%E4%B8%BA%E4%BB%80%E4%B9%88ppt%E5%85%B3%E9%94%AE%E8%AF%8D%E6%B2%A1%E6%9C%89%E5%91%A2%EF%BC%89"><span class="nav-number">4.6.</span> <span class="nav-text">网关（为什么ppt关键词没有呢）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-%E8%B7%AF%E7%94%B1%E7%AE%97%E6%B3%95-%E9%87%8D%E7%82%B9%E3%80%81%E9%9A%BE%E7%82%B9"><span class="nav-number">4.7.</span> <span class="nav-text">4.5 路由算法(重点、难点)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-1%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95"><span class="nav-number">4.7.1.</span> <span class="nav-text">4.5.1迪杰斯特拉算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-2%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8Fdv%E7%AE%97%E6%B3%95"><span class="nav-number">4.7.2.</span> <span class="nav-text">4.5.2距离向量dv算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%92%E6%80%A7%E9%80%86%E8%BD%AC"><span class="nav-number">4.7.2.1.</span> <span class="nav-text">毒性逆转</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-6-%E5%9B%A0%E7%89%B9%E7%BD%91%E4%B8%AD%E7%9A%84%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.8.</span> <span class="nav-text">4.6 因特网中的路由协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-7-SDN"><span class="nav-number">4.9.</span> <span class="nav-text">4.7 SDN</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82"><span class="nav-number">5.</span> <span class="nav-text">第五章 数据链路层</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
